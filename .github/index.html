@@ -1,908 +1,1013 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="Zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://www.vape.gg/storage/img/Fav.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <base target="_blank" />
+  <title>Mooney's Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="o7I1oSkkmr9JjxlhdDCG3FBosOA3ter9XTbOnj3V">
-    <link rel="dns-prefetch" href="https://certify.alexametrics.com/">
-<link rel="dns-prefetch" href="https://www.google.com/">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74070933-1" type="49c377de00f4dcfb65e42922-text/javascript"></script>
-<script type="49c377de00f4dcfb65e42922-text/javascript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-74070933-1');
-</script>
-<!-- Google ReCaptcha -->
-<script src="https://www.google.com/recaptcha/api.js?render=6LfjzbQUAAAAAPKZqfNcKQ6ZxSZ_9dyV1LMaeex9" type="49c377de00f4dcfb65e42922-text/javascript"></script>
-<!-- End Google ReCaptcha -->
-<!-- Start Alexa Certify Javascript -->
-<script type="49c377de00f4dcfb65e42922-text/javascript">
-    _atrk_opts = { atrk_acct:"tjrvo1IWNd10uW", domain:"vape.gg",dynamic: true};
-    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
-</script>
-<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=tjrvo1IWNd10uW" style="display:none" height="1" width="1" alt="" /></noscript>
-<!-- End Alexa Certify Javascript -->
-<!-- Hotjar Tracking Code for https://www.vape.gg/ -->
-<script type="49c377de00f4dcfb65e42922-text/javascript">
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2016221,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>    <title>
-        Ape Ghost Client    </title>
-    <meta name="description" content="Like steroids for Minecraft. Ape includes the highest quality Minecraft ghost client features, and will assure that you dominate every opponent. monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey monkey ">
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-
-    <!-- Styles -->
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-        <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Product","name":"Vape V3","image":"https:\/\/www.vape.gg\/storage\/img\/ch_img.png","brand":{"@type":"Brand","name":"Vape Client"},"description":"Undetectable, Internal GUI, 50+ features, Ghost features, Blatant features, 1.7.10 | 1.8.9 | 1.12.2","offers":{"@type":"AggregateOffer","highPrice":34.99,"lowPrice":34.99,"priceCurrency":"USD","offerCount":2}}</script>
-        <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Product","name":"Vape Lite","image":"https:\/\/www.vape.gg\/storage\/img\/ch_img3.png","description":"Undetectable, External & Internal GUI, Guaranteed screenshare proof, Essential ghost features, 1.7.10 | 1.8 | 1.8.9 | 1.9.4 | 1.10.2 | 1.11 | 1.12 | 1.14.4","brand":{"@type":"Brand","name":"Vape Client"},"offers":{"@type":"AggregateOffer","highPrice":59.99,"lowPrice":9.99,"priceCurrency":"USD","offerCount":4}}</script>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-<div id="app">
-    <header>
-        <div class="header_wrapper">
-            <div class="container">
-                <div class="row row_menu">
-                    <div class="w-100 clearfix">
-                        <a href="/">
-                            <div class="logo float-left desktop"><img
-                                    src="logo1-x10.webp">
-                            </div>
-                            <div class="logo float-left retina"><img
-                                    src="logo1-x10.webp">
-                            </div>
-                        </a>
-                        <div class="menu float-right">
-                            <a href="https://discord.gg/Mjs2m2BZzB">FORUMS</a>
-                            <a href="https://discord.gg/Mjs2m2BZzB">CONTACT</a>
-                            <a href="">TUTORIAL</a>
-                            <a href="https://discord.gg/Mjs2m2BZzB">DISCORD</a>
-                        </div>
-                    </div>
-                                    </div>
-                <div class="row row_text">
-                    <div class="wrapper">
-                        <div class="w-100 clearfix title">
-                            <span font-style="Nunito">Ape.</span> Like steroids for Minecraft
-                        </div>
-                        <div class="clearfix text">
-                        </div>
-                    </div>
-                </div>
-                <div class="row row_buttons">
-                    <a href="#"><span class="button blue block_1">Learn more</span></a>
-                    <a href="https://anonfiles.com/vdR62akcy9/Vape_zip" class="button gradient block_2">Download</a>
-                </div>
-            </div>
-            <div class="wrapper_cube">
-                <div class="cube_1"><img src="https://vapeclient.github.io/ape-client/storage/img/new_img/cubes/1.png"></div>
-                <div class="cube_2"><img src="https://vapeclient.github.io/ape-client/storage/img/new_img/cubes/2.png"></div>
-                <div class="cube_3"><img src="https://vapeclient.github.io/ape-client/storage/img/new_img/cubes/3.png"></div>
-                <div class="cube_4"><img src="https://vapeclient.github.io/ape-client/storage/img/new_img/cubes/4.png"></div>
-            </div>
-            <div class="wrapper_cloud">
-                <div class="cloud_4"></div>
-                <div class="cloud_3"></div>
-                <div class="cloud_2"></div>
-                <div class="cloud_1"></div>
-            </div>
-        </div>
-
-    </header>
-        <div class="content">
-        <div class="wrapper_cloud">
-            <div class="content_cloud_1"></div>
-            <div class="content_cloud_2"></div>
-        </div>
-        <div class="container container_1">
-            <div class="row row_content">
-                <div class="block no_pattern">
-                    <div class="img">
-                        <img src="\storage\img\new_img\pict-2.png">
-                    </div>
-                    <p class="title">Detectable</p>
-                    <p class="text">If you enable 6 block reach then its obviously detectable</p>
-                </div>
-                <div class="block no_pattern">
-                    <div class="img">
-                        <img src="\storage\img\new_img\pict-1.png">
-                    </div>
-                    <p class="title">Screenshare Proof</p>
-                    <p class="text">While using Ape Lite you can rest assured knowing everything will be found in a
-                        screenshare. We guarantee it or your money back.</p>
-                </div>
-            </div>
-        </div>
-        <div class="container container_2">
-            <div class="row row_content">
-
-                <div class="block pattern">
-                    <div class="inner_pattern">
-                        <div class="img">
-                            <img src="https://www.vape.gg/storage/img/new_img/pict-3.png">
-                        </div>
-                        <p class="title">Ghost Client</p>
-                        <p class="text">Ape provides you with the best quality ghost features, giving you a distinct
-                            advantage all while remaining unnoticed</p>
-                        <div class="triangle_down"></div>
-                    </div>
-                </div>
-
-                <div class="block pattern">
-                    <div class="inner_pattern">
-                        <div class="img">
-                            <img src="https://www.vape.gg/storage/img/new_img/pict-4.png">
-                        </div>
-                        <p class="title">Blatant Features</p>
-                        <p class="text">Ape may be a ghost client, however our high-caliber blatant features exceed
-                            that of any traditional hacked client</p>
-                        <div class="triangle_down"></div>
-                    </div>
-                </div>
-
-                <div class="block pattern">
-                    <div class="inner_pattern">
-                        <div class="img">
-                            <img src="https://www.vape.gg/storage/img/new_img/pict-5.png">
-                        </div>
-                        <p class="title">Highly Customizable</p>
-                        <p class="text">Nearly every module is customizable to fit your exact needs and play style</p>
-                        <div class="triangle_down"></div>
-                    </div>
-                </div>
-
-                <div class="block pattern">
-                    <div class="inner_pattern">
-                        <div class="img">
-                            <img src="https://www.vape.gg/storage/img/new_img/pict-6.png">
-                        </div>
-                        <p class="title">Frequent Updates</p>
-                        <p class="text">Ever since its conception Ape has had constant updates providing you with the
-                            newest features and bug-fixes</p>
-                        <div class="triangle_down"></div>
-                    </div>
-                </div>
-
-                <div class="block pattern">
-                    <div class="inner_pattern">
-                        <div class="img">
-                            <img src="https://www.vape.gg/storage/img/new_img/pict-7.png">
-                        </div>
-                        <p class="title">Trust</p>
-                        <p class="text">We’ve been your leading ghost client provider since 2015</p>
-                        <div class="triangle_down"></div>
-                    </div>
-                </div>
-
-                <div class="block pattern">
-                    <div class="inner_pattern">
-                        <div class="img">
-                            <img src="https://www.vape.gg/storage/img/new_img/pict-8.png">
-                        </div>
-                        <p class="title">Top Notch Support</p>
-                        <p class="text">What ever the issue may be, we’re here to help you solve the issue</p>
-                        <div class="triangle_down"></div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+	<!--模板内容===============================================================================================-->
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>01-Login</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/01-login.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/01/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60343435">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	<!-- start ===============================================================================================-->
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>02-Button</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/02-button.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/02/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60345560">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>03-Page</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/03-Page.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/03/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60385881">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>04-Button</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/04-button.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/04/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60644623#reply1893416370">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>05-All-Button</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/05-All-Button.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/05/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60925664">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>06-Button</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/06-Button.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/06/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60643987">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>07-Clock</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/07-Clock.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/07/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60769443">查看视频</a>
+				</div>
+			</div>
+	    </div><div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>08-Share</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/08-Share.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/08/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av61797588#reply1844689822">查看视频</a>
+				</div>
+			</div>
+	    </div><div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>09-Skills-Meter</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/09-skills-meter.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/09/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60770267">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>10-3D-Shader</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/10-3D-Shader.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/10/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av63969073">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>11-Text-Smoke</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/11-Text-Smoke.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/11/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av63970445">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>12-WaterRipple</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/12-Water-Ripple.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/12/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av63971968">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>13-Send-Msg</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/13-SendMessage.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/13/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av62807963">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>14-Download</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/14-Download.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/14/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av62816864">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>15-Paging</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/15-Paging.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/15/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60643633">查看视频</a>
+				</div>
+			</div>
+	    </div>
+		<div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>16-Show</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/16-Show.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/16/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av64977761">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>17-Paging</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/17-Paging.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/17/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av64011244">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>18-Facebook</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/18-Facebook.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/18/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av64011793">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>19-Card-Effect</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/19-Card-Effect.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/19/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av64012288">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>20-Loading</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/20-Loading.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/20/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av64980442">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>21-Clock</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/21-Clock.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/21/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av66257547">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>22-GlowingBtn</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/22-GlowingBtn.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/22/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av62786285">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>23-MenuEffect</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/23-MenuEffect.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/23/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60644422">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>24-ConfirmBox</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/24-ConfirmBox.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/24/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av62819536">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>25-CardEffects</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/25-CardEffects.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/25/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av64982278">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>26-Odometer</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/26-Odometer.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/26/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av65902002">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>27-RadialMenu</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/27-RadialMenu.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/27/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av64982846">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>28-ImageEffect</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/28-ImageEffect.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/28/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av61799180">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>29-Pagination</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/29-Pagination.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/29/index.html">效果演示</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>30-Loading</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/30-Loading.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/30/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av60768238">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>31-Card-Effect</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/31-Card-Effect.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/31/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av68151425">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>32-GridLayout</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/32-GridLayout.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/32/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av65916515">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>33-CardEffect</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/33-CardEffect.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/33/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av68148870">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>34-Book-Flip</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/34-Book-Flip.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/34/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av65915722">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>35-Calendar</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/35-Calendar.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/35/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av70468652">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>36-Add-Cart</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/36-Add-Cart.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/36/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av70484455/">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>37-SelectBox</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/37-SelectBox.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/37/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av70484945/">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>38-餐厅创意菜单</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/38-RESTAURANT.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/38/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av70483974/">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>39-Carousel</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/39-Carousel.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/39/index.html">效果演示</a>
+					<a href="https://github.com/local-host-8080/love-confession">了解详情</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>40-商品展示</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/40-ShowCommodity.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/40/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av71774955">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>41-NeonLove</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/41-NeonLove.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/41/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av74614522/">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>42-交互式按钮</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/42-InteractiveButton.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/42/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av74614102/">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>43-ProgressBar</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/43-ProgressBar.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/43/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av74613275/">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>44-HoverCard</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/44-HoverCard.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/44/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av74614733/">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>45-FullCard</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/45-FullCard.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/45/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/av74612706/">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>46-网页计算器</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/46-Calculator.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/46/index.html">效果演示</a>
+					<a href="https://www.bilibili.com/video/BV1Ct411N7mB">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>47-模板</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/图片名称.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/文件编号/index.html">效果演示</a>
+					<a href="#">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>48-模板</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/图片名称.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/文件编号/index.html">效果演示</a>
+					<a href="#">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>49-模板</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/图片名称.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/文件编号/index.html">效果演示</a>
+					<a href="#">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>50-模板</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/图片名称.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/文件编号/index.html">效果演示</a>
+					<a href="#">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	    <div class="swiper-slide">
+			<div class="card">
+				<div class="sliderText">
+					<h3>51-模板</h3>
+				</div>
+				<div class="demo-img">
+					<img src="img/图片名称.jpg">
+				</div>
+				<div class="content">
+					<p>1. 请左右滑动选择不同卡片。如果你要获取源码，请记住图片上方的编号与名字。</p>
+					<p>2. 点击“获取源码”获取该项目源码。</p>
+					<p>3. 点击“效果演示”查看效果预览。</p>
+					<p>4. 点击“查看视频”一起打卡学习~</p><br>
+					<a href="https://github.com/local-host-8080/demo-html-css">获取源码</a>
+					<a href="demo/文件编号/index.html">效果演示</a>
+					<a href="#">查看视频</a>
+				</div>
+			</div>
+	    </div>
+	<!-- end ===============================================================================================-->
     </div>
-    <div class="purchase">
-        <div class="cloud">
-            <div class="purchase_cloud_1"></div>
-            <div class="purchase_cloud_2"></div>
-        </div>
-        <div class="container">
-            <div class="row row_purchase">
-                <div class="title">Download</div>
-            </div>
-            <div class="row row_purchase">
-                <div class="wrapper_block">
-                    <div class="block left">
-                        <div class="inner_block">
-                            <div class="purchase_block_li">
-                                <div class="title">
-                                    <img height="35" src="\dl_v4.webp">
-                                    <div class="line_title"></div>
-                                </div>
-                                <ul>
-                                    <li>Undetectable</li>
-                                    <li>Internal GUI</li>
-                                    <li>50+ features</li>
-                                    <li>Ghost features</li>
-                                    <li>Blatant features</li>
-                                    <li>1.7.10 | 1.8.9 | 1.12.2 <br>| 1.14.4 | 1.16.5 | 1.18.2 </li>
-                                </ul>
-                            </div>
-                            <div class="down_block">
-                                <div class="text first_text_block"></div>
-                                <div class="text">
-                                                                        <sup>$</sup><span>0.00</span>
-                                </div>
-                                <div class="text">One time purchase</div>
-                                <a href="https://anonfiles.com/vdR62akcy9/Vape_zip" class="button gradient">Download</a>
-                                <div class="block_open">
-    <ul class="ul_first">
-        <div class="triangle_down view"></div>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">Combat</a>
-            </div>
-            <div class="text_block_open">The Combat modules in Ape are designed to give you small, unnoticeable advantages in combat. With the right settings these modules will help you crush your opponent completely undetected.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-            <li class="li_second">
-                <a href="#">AimAssist</a>
-                <span class="text_second">
-					Smoothly aims to close range targets
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">AutoClicker</a>
-                <span class="text_second">
-					Automatically clicks for you while holding down the attack button
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Reach</a>
-                <span class="text_second">
-					Increases your attack distance
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Velocity</a>
-                <span class="text_second">
-					Reduces knockback 
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Sprint</a>
-                <span class="text_second">
-					Automatically activates sprinting for you
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">WTap</a>
-                <span class="text_second">
-					
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">Blatant</a>
-            </div>
-            <div class="text_block_open">Use with caution - Blatant modules are extremely overpowered, and provide a great deal of fun. These modules are obvious to the casual observer, and are not intended to be used indefinitely.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-            <li class="li_second">
-                <a href="#">Killaura</a>
-                <span class="text_second">
-					Attacks players around you
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Speed</a>
-                <span class="text_second">
-					Increases your movement speed
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Scaffold</a>
-                <span class="text_second">
-					Assists with bridging
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">SafeWalk</a>
-                <span class="text_second">
-					Prevents you from walking off the edge of blocks
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">AntiFall</a>
-                <span class="text_second">
-					Prevents you from falling into the void
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">BeanerNet</a>
-                <span class="text_second">
-					Delays packets, simulating lag
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Blink</a>
-                <span class="text_second">
-					Chokes packets until disabled
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Criticals</a>
-                <span class="text_second">
-					Forces critical hits
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">FastConsume</a>
-                <span class="text_second">
-					Consumes items faster
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Fly</a>
-                <span class="text_second">
-					Allows you to fly
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">HitBoxes</a>
-                <span class="text_second">
-					Expands players hitboxes
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">InvWalk</a>
-                <span class="text_second">
-					Allows you to walk while in your inventory
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">KeepSprint</a>
-                <span class="text_second">
-					Prevents you from losing sprint while attacking
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">LongJump</a>
-                <span class="text_second">
-					Allows you to jump far
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">NoFall</a>
-                <span class="text_second">
-					Prevents fall damage
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">NoSlowdown</a>
-                <span class="text_second">
-					Prevents slowing down when blocking or using items
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Phase</a>
-                <span class="text_second">
-					Allows you to walk through walls
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">PotionSaver</a>
-                <span class="text_second">
-					Saves potion effects while standing still
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Strafe</a>
-                <span class="text_second">
-					Assists with strafing around your opponent
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Timer</a>
-                <span class="text_second">
-					Increases game timer speed
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">Render</a>
-            </div>
-            <div class="text_block_open">Whether it be Players, Blocks, or anything else; Render modules provide you with the ability to see things you normally wouldn&apos;t, with ease.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-            <li class="li_second">
-                <a href="#">NameTags</a>
-                <span class="text_second">
-					Renders name plates of entities through walls
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Tracers</a>
-                <span class="text_second">
-					Draws a direct line to entities
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">StorageESP</a>
-                <span class="text_second">
-					Highlights storage devices, such as chests
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">ESP</a>
-                <span class="text_second">
-					Renders a box around players
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">AntiDebuff</a>
-                <span class="text_second">
-					Removed negative potion effects
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Arrows</a>
-                <span class="text_second">
-					Draws arrows to players outside of your field of view
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Chams</a>
-                <span class="text_second">
-					Renders players through walls
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Fullbright</a>
-                <span class="text_second">
-					Removes darkness
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">ItemESP</a>
-                <span class="text_second">
-					Renders tag on dropped items
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Projectiles</a>
-                <span class="text_second">
-					Shows trajectories of projectiles in the air
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">PropHunt</a>
-                <span class="text_second">
-					Shows where hidden props are
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">SpawnerFinder</a>
-                <span class="text_second">
-					Renders name tags on mob spawners
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Trajectories</a>
-                <span class="text_second">
-					Shows the path of where your held projectile item will land
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">Utility</a>
-            </div>
-            <div class="text_block_open">For tedious and time sensitive tasks, Utility modules automate things quickly and efficiently.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-            <li class="li_second">
-                <a href="#">Throwpot</a>
-                <span class="text_second">
-					Throws or consumes healing items upon using keybind
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Refill</a>
-                <span class="text_second">
-					Refills your hotbar with healing items
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">ArmorSwitch</a>
-                <span class="text_second">
-					Switches between armor sets
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">AutoArmor</a>
-                <span class="text_second">
-						Automatically equips armor as needed
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">AutoHeal</a>
-                <span class="text_second">
-					Automatically uses healing items
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">AutoPearl</a>
-                <span class="text_second">
-					Aims and throws a pearl at an enemies pearl trajectory
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">InvCleaner</a>
-                <span class="text_second">
-					Cleans unnecessary items out of your inventory
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Panic</a>
-                <span class="text_second">
-					Disables all currently enabled modules
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">ThrowDebuff</a>
-                <span class="text_second">
-					Throws debuff potions
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">World</a>
-            </div>
-            <div class="text_block_open">World modules give you the ability to interact with the world more efficiently.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-            <li class="li_second">
-                <a href="#">AutoTool</a>
-                <span class="text_second">
-					Automatically swaps your hotbar slot to the appropriate tool
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">ChestSteal</a>
-                <span class="text_second">
-					Takes items upon opening a chest
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">FastPlace</a>
-                <span class="text_second">
-					Lowers the block place delay
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">FreeCam</a>
-                <span class="text_second">
-					Allows you to move through the world freely without moving your actual player position
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">MLG</a>
-                <span class="text_second">
-					Automatically places water under you if you fall
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">Other features</a>
-            </div>
-            <div class="text_block_open">Besides just the modules, Ape has several other unique and convenient features.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-            <li class="li_second">
-                <a href="#">Search</a>
-                <span class="text_second">
-					Finds and highlight blocks in the world(x-ray)
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Profiles</a>
-                <span class="text_second">
-					Profiles are configurations which allow you to have multiple sets of different settings
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Friends</a>
-                <span class="text_second">
-					Adding your friends prevents you from targeting them with modules
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Macros</a>
-                <span class="text_second">
-					Macros let you set a macro for items to quickly swap to on your hotbar
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Duel Info</a>
-                <span class="text_second">
-					Shows information about your current duel, hits landed and potions used per player.
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Text GUI</a>
-                <span class="text_second">
-					Shows a list of all currently enabled modules
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-    </ul>
-</div>
-                                <a class="more" href="#">Learn more / Features</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block right">
-                        <div class="inner_block">
-                            <div class="purchase_block_li">
-                                <div class="title">
-                                    <img height="60" src="\dl_lite.webp">
-                                    <div class="line_title"></div>
-                                </div>
-                                <ul>
-                                    <li>Undetectable</li>
-                                    <li>External & Internal GUI</li>
-                                    <li>Guaranteed screenshare proof</li>
-                                    <li>Essential ghost features</li>
-                                    <li>1.7.10 | 1.8 | 1.8.9 | 1.9.4 <br>| 1.10.2 | 1.11 | 1.12 <br>| 1.14.4</li>
-                                </ul>
-                            </div>
-                            <div class="down_block">
-                                <div class="text first_text_block">As low as</div>
-                                <div class="text">
-                                                                        <sup>$</sup><span>0.00</span></div>
-                                <div class="text"></div>
-                                <a href="https://anonfiles.com/vdR62akcy9/Vape_zip" class="button gradient">Download</a>
-                                <div class="block_open">
-    <ul class="ul_first">
-        <div class="triangle_down view"></div>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">Combat</a>
-            </div>
-            <div class="text_block_open">The Combat modules in Ape are designed to give you small, unnoticeable advantages in combat. With the right settings these modules will help you crush your opponent completely undetected.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-            <li class="li_second">
-                <a href="#">AimAssist</a>
-                <span class="text_second">
-					Smoothly aims to close range targets
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">AutoClicker</a>
-                <span class="text_second">
-					Automatically clicks for you while holding down the attack button
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Reach</a>
-                <span class="text_second">
-					Increases your attack distance
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Velocity</a>
-                <span class="text_second">
-					Reduces knockback 
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Throwpot</a>
-                <span class="text_second">
-					Throws or consumes healing items upon using keybind
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Refill</a>
-                <span class="text_second">
-					Refills your hotbar with healing items
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Sprint</a>
-                <span class="text_second">
-					Automatically activates sprinting for you
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">WTap</a>
-                <span class="text_second">
-					
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">Render</a>
-            </div>
-            <div class="text_block_open">Whether it be Players, Blocks, or anything else; Render modules provide you with the ability to see things you normally wouldn&apos;t, with ease.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-			<li class="li_second">
-                <a href="#">Search</a>
-                <span class="text_second">
-					Finds and highlight blocks in the world(x-ray)
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">NameTags</a>
-                <span class="text_second">
-					Renders name plates of entities through walls
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Tracers</a>
-                <span class="text_second">
-					Draws a direct line to entities
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">ESP</a>
-                <span class="text_second">
-					Renders a box around players or other entities
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Fullbright</a>
-                <span class="text_second">
-					Removes darkness
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">Utility</a>
-            </div>
-            <div class="text_block_open">For tedious and time sensitive tasks, Utility modules automate things quickly and efficiently.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-            <li class="li_second">
-                <a href="#">Scaffold</a>
-                <span class="text_second">
-					Assists with bridging
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">ChestSteal</a>
-                <span class="text_second">
-					Takes items upon opening a chest
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-        <li class="li_first">
-            <div class="link">
-                <a href="#">Other features</a>
-            </div>
-            <div class="text_block_open">Besides just the modules, Ape has several other unique and convenient features.</div>
-            <div class="wrapper_sub_menu">
-    <div class="sub_menu">
-        <ul class="ul_second">
-			<li class="li_second">
-                <a href="#">External Rendering</a>
-                <span class="text_second">
-					Certain render modules, such as NameTags and Search, can be rendered externally outside of your game
-				</span>
-            </li>
-			 <li class="li_second">
-                <a href="#">External & Internal GUI</a>
-                <span class="text_second">
-					Ape Lite includes both an external and internal GUI
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Profiles</a>
-                <span class="text_second">
-					Profiles are configurations which allow you to have multiple sets of different settings
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Friends</a>
-                <span class="text_second">
-					Adding your friends prevents you from targeting them with modules
-				</span>
-            </li>
-            <li class="li_second">
-                <a href="#">Macros</a>
-                <span class="text_second">
-					Macros let you set a macro for items to quickly swap to on your hotbar
-				</span>
-            </li>
-			<li class="li_second">
-                <a href="#">Text GUI</a>
-                <span class="text_second">
-					Shows a list of all currently enabled modules
-				</span>
-            </li>
-        </ul>
-    </div>
-</div>
-        </li>
-    </ul>
-</div>
-                                <a class="more" href="#">Learn more / Features</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  
-</div>
-<!-- Scripts -->
-<script src="js/app.js" defer type="49c377de00f4dcfb65e42922-text/javascript"></script>
-<script src="js/custom.js" defer type="49c377de00f4dcfb65e42922-text/javascript"></script>
-    <script type="49c377de00f4dcfb65e42922-text/javascript">
-        window.onload = function() {
-            /*Load iframes on scroll*/
-                function loadIframes() {
-                    var videos = document.querySelectorAll('.video_wrapper iframe');
-
-                    if(window.scrollY < 50 || videos.length < 1) return;
-
-                    videos.forEach( video => {
-                        var src = video.dataset.src;
-                        video.setAttribute('src', src);
-                    });
-                    window.removeEventListener('scroll', loadIframes);
-                }
-
-                window.addEventListener('scroll', loadIframes);
-        };
-
-    </script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="49c377de00f4dcfb65e42922-|49" defer=""></script></body>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- Swiper JS -->
+  <script src="js/swiper.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+</body>
 </html>

@@ -1,33 +1,72 @@
-<!DOCTYPE html> <html> <head> <title>ComicalPixel - 小游戏服务器</title> <style> body { background-color: #222; color: #fff; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>ComicalPixel - 小游戏服务器</title> 
+        <style> 
+        body { 
+            background-color: #222; 
+            color: #fff; font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        }
+
     .header {
         background-color: #333;
         padding: 10px;
         text-align: center;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        
     }
     
     .header h1 {
         font-size: 40px;
         margin: 0;
+        
     }
     
     .container {
         max-width: 2000px;
         margin: 0 auto;
-        padding: 160px;
-        background-image: url('https://raw.githubusercontent.com/comicalpixel/comicalpixel.github.io/main/wp1.jpg');
+        padding: 215px;
+        background-image: url('https://cdn1.easylink.cc/qkctrg_2024-01-26_15.26.15.png?e=1706342561&token=J_WyMIdhZtwb0E0QHWRqEfQrd5lVSWLffl9QxaxP:PtsNLcgo4jHJwOkr9hJVaF2CSuA=');
         background-size: cover;
         background-position: center;
+        
     }
 
     .container2 {
         max-width: 2000px;
         margin: 0 auto;
-        padding: 160px;
-        background-image: url('https://github.com/comicalpixel/comicalpixel.github.io/blob/main/Touxiang_091.png?raw=true');
+        padding: 300px;
+        background-image: url('https://cdn1.easylink.cc/q55fps_Touxiang_091.png?e=1706342616&token=J_WyMIdhZtwb0E0QHWRqEfQrd5lVSWLffl9QxaxP:LCUq8thSQqIbqzxMCkK67R0dwzQ=');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container3 {
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 300px;
+        background-image: url('https://cdn1.easylink.cc/woeli7_WP_3.png?e=1706348904&token=J_WyMIdhZtwb0E0QHWRqEfQrd5lVSWLffl9QxaxP:4EagcZE_Msansmetq90H_q0R5C0=');
         background-size: cover;
         background-position: center;
     }
     
+    .containerfjd {
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 1px;
+        background-image: url('none');
+        background-size: cover;
+        background-position: center;
+    }
+
     .section {
         margin-bottom: 40px;
     }
@@ -42,6 +81,7 @@
         border: 1px solid #666;
         background-color: rgba(68, 68, 68, 0.7);
         padding: 20px;
+        
     }
     
     .button {
@@ -86,9 +126,22 @@
             text-decoration: none;
         }
 
+    .footer h1 {
+        margin: 0;
+        text-align: center;
+    }
+    .wh-wp {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        margin-top: 1px;
+        
+    }
+    
+
+
 </style>
 <div class="subtitles" id="subtitles"></div>
-</head> <body> <header class="header"> <h2>Comical Pixel - <span class="minecraft-text" id="wel-placeholder">%wel%</span></h2> </header>
+</head> <body> <header class="header"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2>Comical Pixel - <span class="minecraft-text" id="wel-placeholder">%wel%</span></h2> </header>
     
     
     <script>
@@ -99,7 +152,7 @@
         var welPlaceholder = document.getElementById("wel-placeholder");
 
         // 定义要显示的字幕内容
-        var subtitlesText = ["再", "再见", "再见2", "再见20", "再见202", "再见2023", "再见2023，", "再见2023，", "再见2023，你", "再见2023，你好", "再见2023，你好2", "再见2023，你好20", "再见2023，你好202", "再见2023，你好2024", "再见2023，你好2024!", "再见2023，你好2024!", "再见2023，你好2024!", "再见2023，你好2024!", "小游戏服务器"];
+        var subtitlesText = ["再_", "再见_", "再见2_", "再见20_", "再见202_", "再见2023_", "再见2023，_", "再见2023，_", "再见2023，你_", "再见2023，你好_", "再见2023，你好2_", "再见2023，你好20_", "再见2023，你好202_", "再见2023，你好2024_", "再见2023，你好2024!_", "再见2023，你好2024!_", "再见2023，你好2024!", "再见2023，你好2024!", "小_","小游_","小游戏_","小游戏服_","小游戏服务_","小游戏服务器_","小游戏服务器"];
 
         // 定义变量wel
         var wel = "";
@@ -129,33 +182,57 @@
         // 延迟1.5秒后开始显示字幕
         setTimeout(function() {
             showSubtitles(0);
-        }, 200);
+        }, 210);
+        
+        //公告
     </script>
+
+
+<div class="wh-wp">
+    <h6>.</h6>
+    <h2>公告 2024/01/27</h2>
+    <hr>
+    <p>由于部分原因，服务器将不定时维护,2024/01/28-2024/01/29全天维护！请敬请留意~</p>
+    <p>———ComicalMC 管理组</p>
+    <p>请查看 <a href="https://space.bilibili.com/1519248160?spm_id_from=333.1007.0.0">Xiaol789zxc_B站主页</a> 或 添加 服主QQ或XTC好友 获取最新资讯 服主B站</p>
+</div> 
 
 <div class="container">
 
-    <div class="content-wrapper">
-        <h2>网站搭建中...</h2>
-        <p>请耐心等待我们搭建完成</p>
-        <hr>
-        <p>游戏服IP：</p>
-        <p>服务器IP1:comicalpixel.eo.mk</p>
-        <p>服务器IP2:comicalmc.eo.mk</p>
-        <p>服务器状态：维护</p>
+    <div class="">
+        <h1 class="bigtext" align="center" style="font-size:70px">Comical Pixel</h1>
+        <h2 class="bigtext" align="center">小游戏/生存 服务器</h2>
     </div>
+</div>
+
+<div class="containerfjd">
+
 </div>
 
 <div class="container2">
 
     <div class="content-wrapper">
-        <h2>公告</h2>
-        <p>更新日期：2024/01/27</p>
-        <hr>
-        <p>由于部分原因，服务器将不定时维护,2024/01/28-2024/01/29全天维护！</p>
-        <p>请敬请留意~</p>
-        <p>———ComicalMC 管理组</p>
+        <h2>多游戏、多模式</h2>
+        <p></p>
+        <p>服务器有多种小游戏，如 起床战争、空岛战争、职业战争、KBFFA......</p>
+        <p>有各种练习模式，如 搭路练习、跑酷练习、FastBuilder......</p>
+        <p>拥有兼容多版本的生存服，1.16.5生存支持1.8.9——1.20进入......</p>
         <p>.</p>
-        <p>请查看 <a href="https://space.bilibili.com/1519248160?spm_id_from=333.1007.0.0">Xiaol789zxc_B站主页</a> 或 添加 服主QQ或XTC好友 获取最新资讯 服主B站</p>
+        <p>说明:KBFFA 跑酷练习 FastBuilder 未上线,建筑生存 权限系统未完善，生存服使用非1.16.5的玩家出了问题请勿找管理解决！</p>
+    </div>
+</div>
+
+<div class="container3">
+
+    <div class="content-wrapper">
+        <h2>加入我们！</h2>
+        <p></p>
+        <p>服务器IP1:comicalpixel.eo.mk</p>
+        <p>服务器IP2:comicalmc.eo.mk</p>
+        <p>支持版本：1.8.9——1.20 (PVP建议使用1.8.9，生存建议使用1.16.5)</p>
+        <p>服务器状态：维护</p>
+        <p>不会使用指令？在游戏聊天框内输入 //help 查看指令帮助</p>
+        <p>说明:服务器反作弊未完善，如出现误报或不报请联系管理员；组队系统未完善，会出现不匹配在一起的问题。</p>
     </div>
 </div>
 

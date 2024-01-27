@@ -14,7 +14,16 @@
         max-width: 2000px;
         margin: 0 auto;
         padding: 160px;
-        background-image: url('https://github.com/comicalpixel/comicalpixel.github.io/blob/main/wp1.jpg?raw=true');
+        background-image: url('https://raw.githubusercontent.com/comicalpixel/comicalpixel.github.io/main/wp1.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container2 {
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 160px;
+        background-image: url('https://github.com/comicalpixel/comicalpixel.github.io/blob/main/Touxiang_091.png?raw=true');
         background-size: cover;
         background-position: center;
     }
@@ -78,16 +87,73 @@
         }
 
 </style>
-</head> <body> <header class="header"> <h2>Comical Pixel - 小游戏服务器</h2> </header>
+<div class="subtitles" id="subtitles"></div>
+</head> <body> <header class="header"> <h2>Comical Pixel - <span class="minecraft-text" id="wel-placeholder">%wel%</span></h2> </header>
+    
+    
+    <script>
+        // 获取显示字幕的元素
+        var subtitlesElement = document.getElementById("subtitles");
+
+        // 获取包含占位符的文本元素
+        var welPlaceholder = document.getElementById("wel-placeholder");
+
+        // 定义要显示的字幕内容
+        var subtitlesText = ["再", "再见", "再见2", "再见20", "再见202", "再见2023", "再见2023，", "再见2023，", "再见2023，你", "再见2023，你好", "再见2023，你好2", "再见2023，你好20", "再见2023，你好202", "再见2023，你好2024", "再见2023，你好2024!", "再见2023，你好2024!", "再见2023，你好2024!", "再见2023，你好2024!", "小游戏服务器"];
+
+        // 定义变量wel
+        var wel = "";
+
+        // 定义显示字幕的函数
+        function showSubtitles(index) {
+            // 检查是否已经显示完所有字幕
+            if (index >= subtitlesText.length) {
+                return;
+            }
+
+            // 设置显示的字幕内容
+            // subtitlesElement.textContent = subtitlesText[index];
+
+            // 设置变量wel的文本
+            wel = subtitlesText[index];
+
+            // 替换文本中的占位符
+            welPlaceholder.textContent = wel;
+
+            // 延迟1秒后显示下一个字幕
+            setTimeout(function() {
+                showSubtitles(index + 1);
+            }, 250);
+        }
+
+        // 延迟1.5秒后开始显示字幕
+        setTimeout(function() {
+            showSubtitles(0);
+        }, 200);
+    </script>
+
 <div class="container">
 
     <div class="content-wrapper">
-        <h2>网站未开放...</h2>
+        <h2>网站搭建中...</h2>
         <p>请耐心等待我们搭建完成</p>
         <hr>
         <p>游戏服IP：</p>
         <p>服务器IP1:comicalpixel.eo.mk</p>
         <p>服务器IP2:comicalmc.eo.mk</p>
+        <p>服务器状态：维护</p>
+    </div>
+</div>
+
+<div class="container2">
+
+    <div class="content-wrapper">
+        <h2>公告</h2>
+        <p>更新日期：2024/01/27</p>
+        <hr>
+        <p>由于部分原因，服务器将不定时维护,2024/01/28-2024/01/29全天维护！</p>
+        <p>请敬请留意~</p>
+        <p>———ComicalMC 管理组</p>
         <p>.</p>
         <p>请查看 <a href="https://space.bilibili.com/1519248160?spm_id_from=333.1007.0.0">Xiaol789zxc_B站主页</a> 或 添加 服主QQ或XTC好友 获取最新资讯 服主B站</p>
     </div>
@@ -96,7 +162,6 @@
 <footer class="footer">
     <p>.</p>
     <p>&copy; 2023-2024 ComicalMC Network</p>
-    <h6>.</h6>
     <p>友情链接</p>
     <a href="" style="color: #ccc; text-decoration: none; font-size: 12px;">Updating... </a>
     <a href="https://xmsbrowser.mysxl.cn/" style="color: #ccc; text-decoration: none; font-size: 12px;">我爱浏览器</a>

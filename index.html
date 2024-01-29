@@ -1,5 +1,8 @@
 <!DOCTYPE html> 
 <html> 
+    width:1%;
+    heigut:1%;
+
     <head> 
         <title>ComicalPixel - 小游戏服务器</title> 
         <meta name="keywords" content="Comical Pixel,一个简单的、安静的我的世界国际服">
@@ -24,6 +27,8 @@
         left: 0;
         width: 100%;
         height: 50px;
+        overflow: hidden; /* Ensures that content does not spill out */
+        flex: 1; /* Each card will take equal space */
         
     }
     
@@ -48,10 +53,12 @@
     .container {
         max-width: 2000px;
         margin: 0 auto;
-        padding: 215px;
+        padding: 230px;
         background-image: url('https://www.freeimg.cn/i/2024/01/27/65b4c5a1acb56.png');
         background-size: cover;
         background-position: center;
+        overflow: hidden; /* Ensures that content does not spill out */
+        flex: 1; /* Each card will take equal space */
         
     }
 
@@ -62,6 +69,8 @@
         background-image: url('https://www.freeimg.cn/i/2024/01/27/65b4c5a0d0c20.png');
         background-size: cover;
         background-position: center;
+        overflow: hidden; /* Ensures that content does not spill out */
+        flex: 1; /* Each card will take equal space */
     }
 
     .container3 {
@@ -71,6 +80,8 @@
         background-image: url('https://www.freeimg.cn/i/2024/01/27/65b4c5a1ea80b.png');
         background-size: cover;
         background-position: center;
+        overflow: hidden; /* Ensures that content does not spill out */
+        flex: 1; /* Each card will take equal space */
     }
     
     .containerfjd {
@@ -80,6 +91,8 @@
         background-image: url('none');
         background-size: cover;
         background-position: center;
+        display: flex;
+            justify-content: space-between;
     }
 
     .section {
@@ -127,7 +140,8 @@
     .content-wrapper {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 20px;
-        margin-top: 20px;
+        margin-top: 10px;
+        overflow: hidden; /* Ensures that content does not spill out */
     }
     
     .footer a {
@@ -147,41 +161,184 @@
     }
     .wh-wp {
         background-color: rgba(0, 0, 0, 0.5);
+
+        padding: 10px;
+        margin: 0;
+        left: 0;
+        margin: 0;
         padding: 20px;
-        margin-top: 1px;
+        width: 100%;
+        overflow: hidden; /* Ensures that content does not spill out */
+        
         
     }
 
     .gamemode-wrapper {
         background-color: rgba(0, 0, 0, 0.5);
-        padding: 20px;
+        padding: 40px;
         margin-top: 10px;
         width: 100%;
-        height: 350px;
-        width: 210px;
-        display:flexbox;
-        justify-content:space-between
+        height: 450px;
+        width: 720px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
+        overflow: hidden; /* Ensures that content does not spill out */
+        flex: 1; /* Each card will take equal space */
+        border-radius: 5px;
+
+        max-width: 1200px; /* Maximum width of the container */
+         padding: 10px;
+        
+        
+
+
+
+    }
+
+    .gamemode-wrap-jge {
+        padding: 7px;
+        margin-top: 10px;
+        width: 100%;
+        height: 300px;
+        width: 1px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        overflow: hidden; /* Ensures that content does not spill out */
+        flex: 1; /* Each card will take equal space */
     }
 
     .gamemode-bjwp {
-        padding: 20px;
+        padding: 10px;
         margin-top: 10px;
-        width: 100%;
-        height: 320px;
-        width: 210px;
-        display:table;
-        
+        margin-right: 100px;
+        width: 500%;
+        height: 500px;
+        width: 500px;
+        display: flex;
+        overflow: hidden; /* Ensures that content does not spill out */
+            
+            justify-content: space-between;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 45%;
+            border-radius: 5px;
 
     }
+
+    .card-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Maximum width of the container */
+    padding: 10px;
+  }
+
+  .carda {
+    background-color: rgba(0, 0, 0, 0.5 ); /* Semi-transparent dark grey */
+    color: white;
+    flex: 1; /* Each card will take equal space */
+    margin: 1px;
+    border-radius: 3px;
+    overflow: hidden; /* Ensures that content does not spill out */
+  }
+
+  .cardaz {
+    background-color: rgba(0, 0, 0, 0.5 ); /* Semi-transparent dark grey */
+    color: white;
+    flex: 1; /* Each card will take equal space */
+    margin: 1px;
+    border-radius: 3px;
+    overflow: hidden; /* Ensures that content does not spill out */
+    left: -10px;
+  }
+
+  .card-contenta {
+    padding: 18px;
+    height: 270px; /* Fixed height for the example */
+  }
+
+  .card-contentaz {
+    padding: 18px;
+    height: 150px; /* Fixed height for the example */
+  }
+
+  .ggwindow{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 50%;
+    height: 300px;
+    background: #333;
+
+    position: absolute;
+    padding: 30px 22px;
+    left: 30%;
+    top: 35%;
+    border-radius: 10px;
+    overflow: scroll;
+        
+    }
+
+    .ggwindow button{
+        margin: -15px -10px 0 auto;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        background-color: #333;
+        border: none;
+        cursor: pointer;
+    }
+
+    :root{
+     font-size: 1.0em
+    }
+
+
+    @media (min-width: 1200px){
+     :root{
+     font-size: 1.0em
+    }
+    }
+
+    @media (min-width: 1000px){
+     :root{
+     font-size: 0.9em
+    }
+    }
+
+
+        
+
+        
+
+   
+
+
+    
     
     
 
 
 </style>
+
+    width: 1%;
+    height: 1%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    transform-origin: top left; /* Set the origin for scaling */
+    \nav comicalpixel by comicalmc network
+
 <div class="subtitles" id="subtitles"></div>
 </head> <body> <header class="header"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2>Comical Pixel - <span class="minecraft-text" id="wel-placeholder">%wel%</span></h2> </header>
     
+
     
     <script>
         // 获取显示字幕的元素
@@ -224,19 +381,33 @@
         }, 210);
         
         //公告
+
+
+        function scaleBody() {
+  var scaleX = window.innerWidth / 1; // Assuming 1920 is your design width
+  var scaleY = window.innerHeight / 1080; // Assuming 1080 is your design height
+  var scale = Math.min(scaleX, scaleY); // Take the smaller scale factor
+  document.body.style.transform = 'scale(' + scale + ')';
+}
+
+// Call the function on resize and on load
+
     </script>
 
 
+
+
 <div class="wh-wp">
-    <h6>.</h6>
+    <p>.</p>
     <h2>公告 2024/01/27</h2>
     <hr>
     <p>由于部分原因，服务器将不定时维护,2024/01/28-2024/01/29全天维护！请敬请留意~</p>
     <p>———ComicalMC 管理组</p>
     <p>请查看 <a href="https://space.bilibili.com/1519248160?spm_id_from=333.1007.0.0">Xiaol789zxc_B站主页</a> 或 添加 服主QQ或XTC好友 获取最新资讯 服主B站</p>
 </div> 
-
+    
 <div class="container">
+
 
     <div class="">
         
@@ -257,16 +428,45 @@
         <p>我们的服务器拥有多种玩法的游戏和兼容性超强的1.16.5原版生存！</p>
     </div>
 
-    <div class="gamemode-bjwp">
-        
-        <div class="gamemode-wrapper">
+    <div class="card-container">
+        <div class="cardaz">
+          <div class="card-contenta">
             <h2>起床战争</h2>
-            <p></p>
-            <p>模式：经典模式(Solo/4v4v4v4)、极速模式(Solo/4v4v4v4)、无限火力模式(4v4v4v4)</p>
-            <p>游戏简介：游戏开始时，每队各有一张床，它可以说是队伍的生命之源。如果床被破坏，那么这支队伍的成员在死亡后就无法复活。
+            <p>游戏开始时，每队各有一张床，如果床被破坏，那么这支队伍的成员在死亡后就无法复活。
                 为了赢得胜利，玩家需要收集货币并兑换资源，挖掉敌人的床，并击杀全部敌人。</p>
+          </div>
         </div>
+        <div class="carda">
+            <div class="card-contenta">
+              <h2>空岛战争</h2>
+              <p>玩家在各自的空岛上开始游戏，收集资源。游戏的主要目标是成为活到最后的玩家或队伍。
+                一般而言，地图中除了玩家开始游戏的岛屿，还有其他中大型岛屿；玩家死亡后无法复活！</p>
+            </div>
+          </div>
+        <div class="carda">
+          <div class="card-contenta">
+            <h2>搭路练习</h2>
+            <p>在一张地图内，找到一个要练习的操作的练习区，可以练习骚操作。练习区有搭路区、西瓜自救区、战桥区......</p>
+          </div>
+        </div>
+        <div class="carda">
+          <div class="card-contenta">
+            <h2>原版生存</h2>
+            <p>出生点在一个小木屋，踩上踏板随机传说开始你的生存之旅！</p>
+            <p>进入原版生存子服或进入某些区块时游戏会随之卡顿，请耐心等待数据包加载完毕~</p>
+          </div>
+        
 
+          
+        </div>
+        <div class="carda">
+            <div class="card-contentaz">
+              <h2>更多游戏...</h2>
+              <p>等你来体验体验~</p>
+            </div>
+          </div>
+        
+      </div>
 
 
 

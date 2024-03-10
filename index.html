@@ -1,79 +1,398 @@
-
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Comical Pixel - 网站重构</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CMLC Network</title>
+<script></script>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Microsoft YaHei", sans-serif;
+        background-color: #333;
+        color: #fff;
+        transition: all 0.5s;
+        scroll-snap-type: y mandatory; /* 添加这行代码 */
+    }
+    #topbar {
+        position: fixed;
+        top: 1;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: rgba(51, 51, 51, 0.699);
+        color: #fff;
+        padding: 20px 40px 20px;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s;
+        backdrop-filter: blur(10px);
+    }
+    #topbar a {
+        text-decoration: none;
+        color: #fff;
+        transition: all 1.5s;
+        
+    }
+    #topbar a:hover {
+        text-decoration: underline;
+    
+        
+    }
+    .buttontop {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 0 10px;
+    transition: all 0.5s;
+    }
+
+    .buttontop:hover {
+    background-color: #fff;
+    color: #333;
+    }
+
+    #topright { 
+    gap:20px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
     
     
+    }
+
+    #page1 {
+        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2sTx.png');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        scroll-snap-align: start; /* 添加这行代码 */
+        background-color: rgba(0, 0, 0, 0.151);
+    }
+    #page1 h1 {
+        font-size: 36px;
+        text-align: center;
+        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2RpD.png');
+        height: 68px;
+        background-size:auto;
+        width: 143.5vh;
+    }
+    #page1 h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    #titlecard {
+        width: 80%;
+        max-width: 320px;
+        height: 400px;
+        background-color: rgba(19, 18, 18, 0.507);
+        border-radius: 12px;
+        margin: 10px;
+        padding: 20px;
+    }
+    .scroll-down {
+        position: fixed;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        z-index: 999;
+        animation: moveUpDown 1s infinite;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+    }
+
+    .scroll-down i {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .scroll-down i::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        transform: rotate(-45deg);
+    }
     
-        <style>
-        h1 {
-            font-weight: 500;
-            color: #0a86d8;
-            margin-bottom: -16px;
-        }
+    #page2 {
+        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2gfO.png');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start; /* 添加这行代码 */
+    }
+    .blur-card {
+        background-color: rgba(19, 18, 18, 0.507);
+        border-radius: 12px;
+        padding: 20px;
+        backdrop-filter: blur(0.1px);
+        margin: 10px;
+    }
+    .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1000px;
+    }
+    .card {
+        width: 80%;
+        max-width: 320px;
+        height: 400px;
+        background-color: rgba(19, 18, 18, 0.507);
+        border-radius: 12px;
+        margin: 10px;
+        padding: 20px;
+    }
+    .card h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .card h2 {
+        font-size: 18px;
+    }
 
-        h2 {
-            opacity: 0.8;
-        }
+    .white-button {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        background-color: transparent;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
 
-        h2,
-        h3,
-        h4 {
-            font-weight: 300;
-        }
+    .white-button:hover {
+        background-color: #ffffffa4;
+        color: #000;
+    }
 
-        a[href] {
-            color: #0a86d8;
+    #page3 {
+        background-image: url('https://s21.ax1x.com/2024/03/10/pFy28wq.png');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start; /* 添加这行代码 */
+    }
+
+    .large-blur-card {
+        background-color: rgba(19, 18, 18, 0.507);
+        border-radius: 15px;
+        padding: 20px;
+        backdrop-filter: blur(0.1px);
+        width: 550px;
+        height: 350px;
+    }
+
+    #page34 {
+        background-image: url('https://s21.ax1x.com/2024/03/10/pFyWBIx.jpg');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start; /* 添加这行代码 */
+    }
+
+    .footer {
+        background-color: #333;
+        padding: 121px;
+        text-align: center;
+    }
+    
+    .footer p {
+        margin: 0;
+    }
+    .footer a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 12px;
+    }
+    
+    a[href] {
+            color: #e0e0e0;
             text-decoration: none;
         }
 
-        a[href]:hover {
-            opacity: 0.8;
-            text-decoration: underline;
-        }
+    .footer h1 {
+        margin: 0;
+        text-align: center;
+    }
 
-        hr {
-            border: none;
-            border-top: black 1px solid;
-            opacity: 0.3;
-        }
-
-        html {
-            max-width: 800px;
-            margin: auto;
-            background: #fafafa;
-            font-family: Candara, Helvetica, Microsoft Yahei, sans-serif;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            html {
-                background: #1f1f1f;
-                color: #f0f0f0;
-            }
-
-            code {
-                background: #3c3c3c;
-            }
-
-            hr {
-                border-color: #fafafa;
-            }
-        }
-    </style>
+    #footcard {
+        background-color: rgba(19, 18, 18, 0);
+        border-radius: 12px;
+        padding: 20px;
+        backdrop-filter: blur(5px);
+        margin: 10px;
+        
+    }
+  
+</style>
 </head>
-
 <body>
-    <h1>https://comicalmc.mysxl.cn/</h1>
-    <h2>网站重构中...</h2>
-    <hr>
-    <h2>为了摆脱mysxl，现在正在重新构建网站！</h2>
-    <h2>敬请期待~</h2>
-    <center>2023-2024 © ComicalMC Network</center>
-</body>
+    <div id="topbar">
+        <h2>CMLC Network</h2>.
+        
+        
+        <div id="topright">
+          
+      
+          <a href="https://www.bing.com" class="white-button">查看文档</a>
+          <a href="#page3" class="white-button">加入世界</a>
+          <a> <a>  </a> <a>  </a> <a>  </a> </a>
+          
+      </div>
+    </div>
+    <div id="page1">
+        <h1> </h1>
+        <h2>高质量 小游戏 生存 服务器</h2>
+        <i> </i>
+    </div>
+    <div id="page2">
+        <div class="card-container">
+            <h1>欢迎来到CMLCMC方块世界</h1>
+            <hr>
+            <h2>这里有多种小游戏和生存~</h2>
+            
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <h1>起床战争</h2>
+                <h2>1.8.9--1.20</h2>
+                <h3>4个游戏模式</h3>
+                <h3> - 经典模式(Solo/4v4v4v4)</h3>
+                <h3> - 急速模式(Solo/4v4v4v4)</h3>
+                <h3> - 无限火力(4v4v4v4)</h3>
+            </div>
+            <div class="card">
+                <h1>空岛战争</h1>
+                <h2>1.8.9--1.20</h2>
+                <h3>HYT玩法，道具更丰富</h3>
+                <h3>测试阶段，仅Solo模式</h3>
+            </div>
+            <div class="card">
+                <h1>搭路练习</h1>
+                <h2>1.8.9--1.20</h2>
+                <h3>超大练习地图</h3>
+                <h3>丰富的练习区</h3>
+                <h3>有 搭路练习、自救练习、PVP 等区域！</h3>
+            </div>
+            <div class="card">
+                <h1>原版生存</h1>
+                <h2>1.16--1.20</h2>
+                <h3>第一次出生在木屋，踏上踏板随机传送开始生存！</h3>
+                <h3>提示：若有违规行为(如炸服、炸图、违规偷家、拆管理区域建筑)将会不允许进入生存区！</h3>
+            </div>
+        
+        </div>
+        <h4>说明：上述描述可能与实际不符，以最新动态为主！</h4>
+    </div>
 
+    <div id="page34">
+      <div class="card-container">
+          <h1 style="justify-content: center;">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;我们还制作了...</h1>
+          <hr>
+          
+          
+      </div>
+      <div class="card-container">
+          <div class="card">
+              <h1>Comical Minecraft Launcher Pro</h2>
+              <h2>一个有基础的功能的Minecraft启动器，旧版本已停止开发，新版本现暂停开发</h2>
+              <h1>&ensp;</h1>
+              <h1>&ensp;</h1>
+              
+              
+              <a href="#page34" class="white-button">暂无页面</a>
+          </div>
+          <div class="card">
+              <h1>CMLC Client(1.8.9)</h1>
+              <h2>一个集成 ForgeMOD+APE 部分功能的PVP客户端，满级反注入</h2>
+              <h2>提示：崩端问题暂时解决方法为开启快速渲染。</h2>
+              <h1>&ensp;</h1>
+              <h1>&ensp;</h1>
+              
+              <a href="#page34" class="white-button">暂无页面</a>
+          </div>
+          
+          
+      
+      </div>
+      
+  </div>
+
+    <div id="page3">
+        <div class="large-blur-card">
+            <h2>加入我们</h2>
+            <h3>服务器IP1:comicalpixel.eo.mk</h3>
+            <h3>服务器IP2:comicalmc.eo.mk</h3>
+            <h3>支持版本：1.8.9—1.20 (游戏区建议1.8.9，生存区建议1.16.5)</h3>
+            <h3> </h3>
+            <h3>指令帮助 //help</h3>
+            <h3>交流群号：785558347</h3>
+            <hr> 
+            <h4>提示:服务器未完善，暂时非长期开放</h4>
+        </div>
+    </div>
+</body>
+<footer class="footer">
+  
+  <div class="footcard">
+    
+    
+
+  </div>
+  <p>&copy; 2023-2024 ComicalMC Network</p>
+  <h1>&ensp;</h1>
+  <div></div>
+  <p>友情链接</p>
+  <h1>&ensp;</h1>
+  <p style="color: #ccc">网站</p>
+  
+  <a href="https://xmsbrowser.mysxl.cn/" style="color: #ffffff; text-decoration: none; font-size: 12px;">我爱浏览器</a>
+  <a href="https://newworldmc.github.io/" style="color: #ffffff; text-decoration: none; font-size: 12px;">NewWorldMC</a>
+  <a href="https://wear.rexwe.net/" style="color: #ffffff; text-decoration: none; font-size: 12px;">RexWe</a>
+  <a href="https://orson2010.github.io/Wearbox/2022/05/03/WB2.0/" style="color: #ffffff; text-decoration: none; font-size: 12px;">WearBox</a>
+  <p style="color: #ccc" >Blog 个人主页</p>
+  <a href="https://space.bilibili.com/627010617/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">柠檬初夏</a>
+  <a href="https://space.bilibili.com/2019671591/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">我是从前那个少年</a>
+  <a href="https://space.bilibili.com/569523515/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">我爱科技云</a>
+  <a href="https://space.bilibili.com/521106677/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">老树皮_</a>
+  <a href="https://space.bilibili.com/660301960?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">yel114514</a>
+  <a href="https://space.bilibili.com/2013923367/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">_F12PVP_</a>
+  <a href="https://space.bilibili.com/1439074718/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">小恺恺1314</a>
+</footer>
 </html>

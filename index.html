@@ -14,6 +14,7 @@
         color: #fff;
         transition: all 0.5s;
         scroll-snap-type: y mandatory; /* 添加这行代码 */
+
     }
     #topbar {
         position: fixed;
@@ -80,7 +81,7 @@
     #page1 h1 {
         font-size: 36px;
         text-align: center;
-        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2RpD.png');
+        /* background-image: url('https://s21.ax1x.com/2024/03/10/pFy2RpD.png');*/
         height: 68px;
         background-size:auto;
         width: 109vh;
@@ -260,6 +261,62 @@
         
     }
   
+    /* 适配手机 */
+    @media only screen and (max-width: 600px) {
+        .card-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            width: 90%;
+            max-width: 90%;
+            height: auto;
+            margin: 10px 0;
+        }
+    }
+
+    /* 适配手表 */
+    @media only screen and (max-width: 420px) {
+        .card {
+            width: 95%;
+            max-width: 95%;
+            height: auto;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .footer {
+            padding: 20px;
+        }
+    }
+
+    /* 适配分辨率低于420*460的设备 */
+    @media only screen and (max-width: 420px) and (max-height: 460px) {
+        body {
+            font-size: 12px;
+        }
+        .card h1, .card h2, .card h3 {
+            font-size: 14px;
+        }
+        .footer p, .footer a {
+            font-size: 10px;
+        }
+    }
+
+    /* 适配分辨率低于320*360的设备 */
+    @media only screen and (max-width: 320px) and (max-height: 360px) {
+        body {
+            font-size: 12px;
+        }
+        .card h1, .card h2, .card h3 {
+            font-size: 14px;
+        }
+        .footer p, .footer a {
+            font-size: 10px;
+        }
+    }
+
+    /* 其他样式保持不变 */
+  
 </style>
 </head>
 <body>
@@ -270,14 +327,15 @@
         <div id="topright">
           
       
-          <a href="https://comicalpixel.github.io/Wiki.html" class="white-button">查看文档</a>
+          <a href="https://www.bing.com" class="white-button">查看文档</a>
           <a href="#page3" class="white-button">加入世界</a>
           <a> <a>  </a> <a>  </a> <a>  </a> </a>
           
       </div>
     </div>
     <div id="page1">
-        <h1> </h1>
+        
+        <h1 class="bigtext"  style="font-size:70px">Comical Pixel</h1>
         <h2>高质量 小游戏 生存 服务器</h2>
         <i> </i>
     </div>

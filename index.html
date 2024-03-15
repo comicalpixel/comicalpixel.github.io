@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CMLC Network</title>
+<title>ComicalMC Network</title>
 <script></script>
 <style>
     body {
@@ -77,14 +77,15 @@
         flex-direction: column;
         scroll-snap-align: start; /* 添加这行代码 */
         background-color: rgba(0, 0, 0, 0.151);
+        
     }
     #page1 h1 {
-        font-size: 36px;
         text-align: center;
         /* background-image: url('https://s21.ax1x.com/2024/03/10/pFy2RpD.png');*/
         height: 68px;
         background-size:auto;
         width: 109vh;
+        font-size:60px
     }
     #page1 h2 {
         font-size: 24px;
@@ -211,7 +212,6 @@
         background-color: rgba(19, 18, 18, 0.507);
         border-radius: 15px;
         padding: 20px;
-        backdrop-filter: blur(0.1px);
         width: 550px;
         height: 350px;
     }
@@ -260,33 +260,300 @@
         margin: 10px;
         
     }
+
+    
+
   
     /* 适配手机 */
     @media only screen and (max-width: 600px) {
         .card-container {
-            flex-direction: column;
+            font-size: 12px;
             align-items: center;
         }
         .card {
             width: 90%;
             max-width: 90%;
-            height: auto;
+            
             margin: 10px 0;
         }
+        
+        /* 组件 */
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: "Microsoft YaHei", sans-serif;
+        background-color: #333;
+        color: #fff;
+        transition: all 0.5s;
+        scroll-snap-type: y mandatory; /* 添加这行代码 */
+
+    }
+    #topbar {
+        position: fixed;
+        top: 1;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: rgba(51, 51, 51, 0.699);
+        color: #fff;
+        padding: 20px 40px 20px;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s;
+        backdrop-filter: blur(10px);
+        font-size: 12px;
+    }
+    #topbar a {
+        text-decoration: none;
+        color: #fff;
+        transition: all 1.5s;
+        
+    }
+    #topbar a:hover {
+        text-decoration: underline;
+    
+        
+    }
+    .buttontop {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin: 0 10px;
+    transition: all 0.5s;
+    }
+
+    .buttontop:hover {
+    background-color: #fff;
+    color: #333;
+    }
+
+    #topright { 
+    gap:20px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    
+    
+    }
+
+    #page1 {
+        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2sTx.png');
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        scroll-snap-align: start; /* 添加这行代码 */
+        background-color: rgba(0, 0, 0, 0.151);
+        font-size: 15px;
+    }
+    #page1 h1 {
+        font-size: 36px;
+        text-align: center;
+        /* background-image: url('https://s21.ax1x.com/2024/03/10/pFy2RpD.png');*/
+        height: 68px;
+        background-size:auto;
+        width: 109vh;
+        font-size:50px
+    }
+    #page1 h2 {
+        font-size: 17px;
+        text-align: center;
+    }
+    #titlecard {
+        width: 80%;
+        max-width: 320px;
+        height: 400px;
+        background-color: rgba(19, 18, 18, 0.507);
+        border-radius: 12px;
+        margin: 10px;
+        padding: 20px;
+        font-size: 17px;
+    }
+    .scroll-down {
+        position: fixed;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        z-index: 999;
+        animation: moveUpDown 1s infinite;
+    }
+
+    
+
+    .scroll-down i {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .scroll-down i::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        transform: rotate(-45deg);
+    }
+    
+    #page2 {
+        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2gfO.png');
+        background-size: cover;
+        height: 100vh;
+        display:contents;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start; /* 添加这行代码 */
+        justify-content: center;
+        align-items: center;
+    }
+    .blur-card {
+        background-color: rgba(19, 18, 18, 0.507);
+        border-radius: 12px;
+        padding: 20px;
+        backdrop-filter: blur(0.1px);
+        margin: 10px;
+    }
+    .card-container {
+        display:flex;
+        justify-content: center;
+        align-items: flex-start;
+        
+        flex: 10;
+        width: 1000px;
+        flex-direction:column;
+        flex-wrap: wrap;
+
+    }
+    .card {
+        width: 50%;
+        max-width: 320px;
+        height: 400px;
+        background-color: rgba(19, 18, 18, 0.507);
+        border-radius: 12px;
+        margin: 10px;
+        padding: 20px;
+    }
+    .card h1 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .white-button {
+        display: inline-block;
+        padding: 7px 15px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        background-color: transparent;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .white-button:hover {
+        background-color: #ffffffa4;
+        color: #000;
+    }
+
+    #page3 {
+        background-image: url('https://s21.ax1x.com/2024/03/10/pFy28wq.png');
+        background-size: cover;
+        height: 100vh;
+        display:contents;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start; /* 添加这行代码 */
+    }
+
+    .large-blur-card {
+        background-color: rgba(19, 18, 18, 0.507);
+        border-radius: 15px;
+        padding: 20px;
+        width: 550px;
+        height: 350px;
+    }
+
+    #page34 {
+        background-image: url('https://s21.ax1x.com/2024/03/10/pFyWBIx.jpg');
+        background-size: cover;
+        height: 100vh;
+        display:contents;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start; /* 添加这行代码 */
+        width: 100%;
+    }
+
+    .footer {
+        background-color: #333;
+        padding: 121px;
+        text-align: center;
+    }
+    
+    .footer p {
+        margin: 0;
+    }
+    .footer a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 12px;
+    }
+    
+    a[href] {
+            color: #e0e0e0;
+            text-decoration: none;
+        }
+
+    .footer h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    #footcard {
+        background-color: rgba(19, 18, 18, 0);
+        border-radius: 12px;
+        padding: 20px;
+        backdrop-filter: blur(5px);
+        margin: 10px;
+        
+    }
     }
 
     /* 适配手表 */
     @media only screen and (max-width: 420px) {
         .card {
             width: 95%;
-            max-width: 95%;
+            
             height: auto;
             margin: 10px 0;
             padding: 10px;
+            
         }
         .footer {
             padding: 20px;
         }
+
     }
 
     /* 适配分辨率低于420*460的设备 */
@@ -321,13 +588,13 @@
 </head>
 <body>
     <div id="topbar">
-        <h2>CMLC Network</h2>.
+        <h2>ComicalMC Network</h2>
         
         
         <div id="topright">
           
       
-          <a href="https://comicalpixel.github.io/Wiki.html" class="white-button">查看文档</a>
+          <a href="https://comicalpixel.github.io/wiki.html" class="white-button">查看文档</a>
           <a href="#page3" class="white-button">加入世界</a>
           <a> <a>  </a> <a>  </a> <a>  </a> </a>
           
@@ -335,13 +602,13 @@
     </div>
     <div id="page1">
         
-        <h1 class="bigtext"  style="font-size:70px">Comical Pixel</h1>
+        <h1>Comical Pixel</h1>
         <h2>高质量 小游戏 生存 服务器</h2>
         <i> </i>
     </div>
     <div id="page2">
         <div class="card-container">
-            <h1>欢迎来到CMLCMC方块世界</h1>
+            <h1>欢迎来到ComicalPixel方块世界</h1>
             <hr>
             <h2>这里有多种小游戏和生存~</h2>
             

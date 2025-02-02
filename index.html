@@ -1,186 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ComicalPixel Network</title>
-<script></script>
+<title>ComicalPixel Network - 插件开服社区,小游戏服务器 交流群: 785558347 Bukkit插件开发教程/Bukkit开服基础教学/开服资源分享站(开发中)</title>
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: "Microsoft YaHei", sans-serif;
-        background-color: #333;
-        color: #fff;
-        transition: all 0.5s;
-        scroll-snap-type: y mandatory; /* 添加这行代码 */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #272727;
+    /* font-family: Arial, sans-serif; */
+    font-family: "Microsoft YaHei", sans-serif;
+  }
 
-    }
-    #topbar {
-        position: fixed;
-        top: 1;
-        left: 0;
-        width: 100%;
-        height: 40px;
-        background-color: rgba(51, 51, 51, 0.699);
-        color: #fff;
-        padding: 20px 40px 20px;
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.5s;
-        backdrop-filter: blur(10px);
-    }
-    #topbar a {
-        text-decoration: none;
-        color: #fff;
-        transition: all 1.5s;
-        
-    }
-    #topbar a:hover {
-        text-decoration: underline;
-    
-        
-    }
-    .buttontop {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 20px;
-    padding: 5px 15px;
-    margin: 0 10px;
-    transition: all 0.5s;
-    }
-
-    .buttontop:hover {
-    background-color: #fff;
-    color: #333;
-    }
-
-    #topright { 
-    gap:20px;
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    
-    
-    }
-
-    #page1 {
-        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2sTx.png');
-        background-size: cover;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        scroll-snap-align: start; /* 添加这行代码 */
-        background-color: rgba(0, 0, 0, 0.151);
-        
-    }
-    #page1 h1 {
-        text-align: center;
-        /* background-image: url('https://s21.ax1x.com/2024/03/10/pFy2RpD.png');*/
-        height: 68px;
-        background-size:auto;
-        width: 109vh;
-        font-size:60px
-    }
-    #page1 h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-    #titlecard {
-        width: 80%;
-        max-width: 320px;
-        height: 400px;
-        background-color: rgba(19, 18, 18, 0.507);
-        border-radius: 12px;
-        margin: 10px;
-        padding: 20px;
-    }
-    .scroll-down {
-        position: fixed;
-        left: 50%;
-        bottom: 20px;
-        transform: translateX(-50%);
-        z-index: 999;
-        animation: moveUpDown 1s infinite;
-    }
-
-    @keyframes moveUpDown {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(10px);
-        }
-    }
-
-    .scroll-down i {
-        display: block;
-        width: 24px;
-        height: 24px;
-        border: 2px solid #fff;
-        border-radius: 50%;
-        position: relative;
-    }
-
-    .scroll-down i::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 6px;
-        height: 6px;
-        border-top: 2px solid #fff;
-        border-left: 2px solid #fff;
-        transform: rotate(-45deg);
-    }
-    
-    #page2 {
-        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2gfO.png');
-        background-size: cover;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: start; /* 添加这行代码 */
-    }
-    .blur-card {
-        background-color: rgba(19, 18, 18, 0.507);
-        border-radius: 12px;
-        padding: 20px;
-        backdrop-filter: blur(0.1px);
-        margin: 10px;
-    }
-    .card-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 1000px;
-    }
-    .card {
-        width: 80%;
-        max-width: 320px;
-        height: 400px;
-        background-color: rgba(19, 18, 18, 0.507);
-        border-radius: 12px;
-        margin: 10px;
-        padding: 20px;
-    }
-    .card h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-    .card h2 {
-        font-size: 18px;
-    }
-
-    .white-button {
+  .white-button {
         display: inline-block;
         padding: 10px 20px;
         border: 2px solid #fff;
@@ -191,132 +25,62 @@
         text-decoration: none;
         font-size: 16px;
         cursor: pointer;
+        transition: all 0.7s;
     }
-
     .white-button:hover {
-        background-color: #ffffffa4;
-        color: #000;
+        background-color: #ffffff9c;
+        color: rgba(37, 37, 37, 0.699);
     }
 
-    #page3 {
-        background-image: url('https://s21.ax1x.com/2024/03/10/pFy28wq.png');
-        background-size: cover;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: start; /* 添加这行代码 */
-    }
-
-    .large-blur-card {
-        background-color: rgba(19, 18, 18, 0.507);
-        border-radius: 15px;
-        padding: 20px;
-        width: 550px;
-        height: 350px;
-    }
-
-    #page34 {
-        background-image: url('https://s21.ax1x.com/2024/03/10/pFyWBIx.jpg');
-        background-size: cover;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: start; /* 添加这行代码 */
-    }
-
-    .footer {
-        background-color: #333;
-        padding: 121px;
+    .spi-button {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #ffffff;
+        border-radius: 2px;
+        background-color: transparent;
+        color: #fff;
         text-align: center;
-    }
-    
-    .footer p {
-        margin: 0;
-    }
-    .footer a {
-        color: #ccc;
         text-decoration: none;
-        font-size: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.7s;
     }
+    .spi-button:hover {
+        background-color: #ffffff15;
+        color: #fff
+    }
+
+  .header {
+    position: fixed;
+    top: 1;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(51, 51, 51, 0);
+    backdrop-filter: blur(9px);
+    align-items: center;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    padding-top: 7px;
+    padding-left: 30px;
+    color: white;
+    z-index: 1000;
+    transition: all 0.5s;
+    flex-direction:row;
+    justify-content: space-between;
+        
+  }
+
+  #headerright { 
+    gap:20px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    transition: all 0.5s;
     
-    a[href] {
-            color: #e0e0e0;
-            text-decoration: none;
-        }
-
-    .footer h1 {
-        margin: 0;
-        text-align: center;
     }
-
-    #footcard {
-        background-color: rgba(19, 18, 18, 0);
-        border-radius: 12px;
-        padding: 20px;
-        backdrop-filter: blur(5px);
-        margin: 10px;
-        
-    }
-
-    
-
-  
-    /* 适配手机 */
-    @media only screen and (max-width: 600px) {
-        .card-container {
-            font-size: 12px;
-            align-items: center;
-        }
-        .card {
-            width: 90%;
-            max-width: 90%;
-            
-            margin: 10px 0;
-        }
-        
-        /* 组件 */
-        body {
-        margin: 0;
-        padding: 0;
-        font-family: "Microsoft YaHei", sans-serif;
-        background-color: #333;
-        color: #fff;
-        transition: all 0.5s;
-        scroll-snap-type: y mandatory; /* 添加这行代码 */
-
-    }
-    #topbar {
-        position: fixed;
-        top: 1;
-        left: 0;
-        width: 100%;
-        height: 40px;
-        background-color: rgba(51, 51, 51, 0.699);
-        color: #fff;
-        padding: 20px 40px 20px;
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.5s;
-        backdrop-filter: blur(10px);
-        font-size: 12px;
-    }
-    #topbar a {
-        text-decoration: none;
-        color: #fff;
-        transition: all 1.5s;
-        
-    }
-    #topbar a:hover {
-        text-decoration: underline;
-    
-        
-    }
-    .buttontop {
+    .headertop {
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
@@ -325,187 +89,276 @@
     margin: 0 10px;
     transition: all 0.5s;
     }
-
-    .buttontop:hover {
+    .headertop:hover {
     background-color: #fff;
     color: #333;
     }
 
-    #topright { 
-    gap:20px;
+  .content {
+    position: relative;
+    top: 50px;
+    height: calc(100% - 50px);
+  }
+
+  .page {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #333;
+    color: white;
+    
+    box-sizing: border-box;
+  }
+
+  .page.active {
+    display: block;
+  }
+
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.0s ease-in-out;
+  }
+
+  .slider img.active {
+    opacity: 1;
+  }
+
+  .slider-controls {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .slider-controls button {
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .slider-dots {
     display: flex;
-    justify-content: right;
-    align-items: right;
-    
-    
-    }
+    justify-content: center;
+    margin-top: 10px;
+  }
 
-    #page1 {
-        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2sTx.png');
-        background-size: cover;
-        height: 100vh;
-        width: 100%;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        scroll-snap-align: start; /* 添加这行代码 */
-        background-color: rgba(0, 0, 0, 0.151);
-        font-size: 15px;
-    }
-    #page1 h1 {
-        font-size: 36px;
-        text-align: center;
-        /* background-image: url('https://s21.ax1x.com/2024/03/10/pFy2RpD.png');*/
-        height: 68px;
-        background-size:auto;
-        width: 109vh;
-        font-size:50px
-    }
-    #page1 h2 {
-        font-size: 17px;
-        text-align: center;
-    }
-    #titlecard {
-        width: 80%;
-        max-width: 320px;
-        height: 400px;
-        background-color: rgba(19, 18, 18, 0.507);
-        border-radius: 12px;
-        margin: 10px;
-        padding: 20px;
-        font-size: 17px;
-    }
-    .scroll-down {
-        position: fixed;
-        left: 50%;
-        bottom: 20px;
-        transform: translateX(-50%);
-        z-index: 999;
-        animation: moveUpDown 1s infinite;
-    }
+  .slider-dots span {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
 
+  .slider-dots span.active {
+    background: #555555;
+  }
+
+  .slider-text {
+    /*使用了kimi修复位置错误*/
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 水平和垂直方向居中 */
+  color: white;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px; /* 增加内边距 */
+  box-sizing: border-box;
+  width: 100%; /* 设置宽度为80% */
+  max-width: 100%; /* 设置最大宽度 */
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* 垂直排列子元素 */
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
     
+}
+  .slider-text2 {
+    background: rgb(255, 255, 255);
+    height: 0%;
+  }
 
-    .scroll-down i {
-        display: block;
-        width: 24px;
-        height: 24px;
-        border: 2px solid #fff;
-        border-radius: 50%;
-        position: relative;
-    }
+.slider-text h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.slider-text h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
 
-    .scroll-down i::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 6px;
-        height: 6px;
-        border-top: 2px solid #fff;
-        border-left: 2px solid #fff;
-        transform: rotate(-45deg);
-    }
-    
-    #page2 {
-        background-image: url('https://s21.ax1x.com/2024/03/10/pFy2gfO.png');
-        background-size: cover;
-        height: 100vh;
-        display:contents;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: start; /* 添加这行代码 */
-        justify-content: center;
-        align-items: center;
-    }
-    .blur-card {
-        background-color: rgba(19, 18, 18, 0.507);
-        border-radius: 12px;
-        padding: 20px;
-        backdrop-filter: blur(0.1px);
-        margin: 10px;
-    }
-    .card-container {
-        display:flex;
-        justify-content: center;
-        align-items: flex-start;
+.slider-text p {
+  margin: 5px 0;
+}
+
+.slider-text a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+  .slider-text p {
+    display: none;
+    margin: 0;
+  }
+
+  .slider-text p.active {
+    display: block;
+  }
+
+  .page {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #333;
+  color: white;
+  box-sizing: border-box;
+}
+
+.page.active {
+  display: block;
+}
+
+  .server {
+    /*background-image: url('https://s21.ax1x.com/2024/03/10/pFy2sTx.png');*/
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-snap-align: start; /* 添加这行代码 */
+    background-color: rgba(0, 0, 0, 0.151);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 100px;
+  }
+
+  .image-box {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .image-container {
+            position: relative;
+            width: 30%;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+        .overlay-text {
+            font-size: 18px;
+            text-align: center;
+            padding: 10px;
+        }
+        .server a {
+            text-decoration: underline;
+            color: rgb(43, 255, 0);
+        }
+
+
+  .community {
+    /*background-image: url('https://s21.ax1x.com/2024/03/10/pFy2sTx.png');*/
+    background-size: cover;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-snap-align: start; /* 添加这行代码 */
+    background-color: rgba(0, 0, 0, 0.151);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 5%;
+    padding: 7px;
+  }
+  .community-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding: 7px;
+  }
+
+   .community-item {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 7px;
+  }
+
+   .community-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+   .community-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #cecece;
+  }
+
+   .community-item p {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 10px;
+  }
+
+   .community-item a {
+    display: inline-block;
+    padding: 9px 18px;
+    background-color: #2e2e2e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
         
-        flex: 10;
-        width: 1000px;
-        flex-direction:column;
-        flex-wrap: wrap;
 
-    }
-    .card {
-        width: 50%;
-        max-width: 320px;
-        height: 400px;
-        background-color: rgba(19, 18, 18, 0.507);
-        border-radius: 12px;
-        margin: 10px;
-        padding: 20px;
-    }
-    .card h1 {
-        font-size: 15px;
-        margin-bottom: 10px;
-    }
-    .card h2 {
-        font-size: 18px;
-    }
 
-    .white-button {
-        display: inline-block;
-        padding: 7px 15px;
-        border: 2px solid #fff;
-        border-radius: 5px;
-        background-color: transparent;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        cursor: pointer;
-        font-size: 12px;
-    }
-
-    .white-button:hover {
-        background-color: #ffffffa4;
-        color: #000;
-    }
-
-    #page3 {
-        background-image: url('https://s21.ax1x.com/2024/03/10/pFy28wq.png');
-        background-size: cover;
-        height: 100vh;
-        display:contents;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: start; /* 添加这行代码 */
-    }
-
-    .large-blur-card {
-        background-color: rgba(19, 18, 18, 0.507);
-        border-radius: 15px;
-        padding: 20px;
-        width: 550px;
-        height: 350px;
-    }
-
-    #page34 {
-        background-image: url('https://s21.ax1x.com/2024/03/10/pFyWBIx.jpg');
-        background-size: cover;
-        height: 100vh;
-        display:contents;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: start; /* 添加这行代码 */
-        width: 100%;
-    }
-
-    .footer {
+  .footer {
         background-color: #333;
         padding: 121px;
         text-align: center;
@@ -519,17 +372,16 @@
         text-decoration: none;
         font-size: 12px;
     }
-    
-    a[href] {
-            color: #e0e0e0;
-            text-decoration: none;
-        }
+    .footer h1 {
+        color: #ffffff;
+        margin: 0;
+        text-align: center;
+    }
 
     .footer h1 {
         margin: 0;
         text-align: center;
     }
-
     #footcard {
         background-color: rgba(19, 18, 18, 0);
         border-radius: 12px;
@@ -538,205 +390,311 @@
         margin: 10px;
         
     }
-    }
+        
 
-    /* 适配手表 */
-    @media only screen and (max-width: 420px) {
-        .card {
-            width: 95%;
-            
-            height: auto;
-            margin: 10px 0;
-            padding: 10px;
-            
-        }
-        .footer {
-            padding: 20px;
-        }
-
-    }
-
-    /* 适配分辨率低于420*460的设备 */
-    @media only screen and (max-width: 420px) and (max-height: 460px) {
-        body {
-            font-size: 12px;
-        }
-        .card h1, .card h2, .card h3 {
-            font-size: 14px;
-        }
-        .footer p, .footer a {
-            font-size: 10px;
-        }
-    }
-
-    /* 适配分辨率低于320*360的设备 */
-    @media only screen and (max-width: 320px) and (max-height: 360px) {
-        body {
-            font-size: 12px;
-        }
-        .card h1, .card h2, .card h3 {
-            font-size: 14px;
-        }
-        .footer p, .footer a {
-            font-size: 10px;
-        }
-    }
-
-    /* 其他样式保持不变 */
-  
 </style>
 </head>
 <body>
-    <div id="topbar">
-        <h2>ComicalMC Network</h2>
-        
-        
-        <div id="topright">
-          
-      
-          <a href="https://comicalpixel.github.io/wiki.html" class="white-button">查看文档</a>
-          <a href="#page3" class="white-button">加入世界</a>
-          <a> <a>  </a> <a>  </a> <a>  </a> </a>
-          
-      </div>
-    </div>
-    <div id="page1">
-        
-        <h1>Comical Pixel</h1>
-        <h2>坚持原创小游戏; 高质量小游戏服务器</h2>
-        <i> </i>
-    </div>
-    <div id="page2">
-        <div class="card-container">
-            <h1>欢迎来到ComicalPixel方块世界</h1>
-            <hr>
-            <h2> </h2>
-            
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <h1>起床战争</h2>
-                <h2>1.8.9--1.20</h2>
-                <h3>与其他服务器与众不同的起床战争</h3>
-                <h3> - 梦幻普通模式(Solo/4v4v4v4)</h3>
-                <h3> - 梦幻急速模式(Solo/4v4v4v4)</h3>
-                <h3> - 超级起床战争(4v4v4v4)(未开发)</h3>
-            </div>
-            <div class="card">
-                <h1>空岛战争</h1>
-                <h2>1.8.9--1.20</h2>
-                <h3>通过投票来决定职业模式</h3>
-                <h3>(开发中)</h3>
-            </div>
-            <div class="card">
-                <h1>搭路练习</h1>
-                <h2>1.8.9--1.20</h2>
-                <h3>超大练习地图</h3>
-                <h3>丰富的练习区</h3>
-                <h3>有 搭路练习、自救练习、PVP 等区域！</h3>
-            </div>
-            <div class="card">
-                <h1>原版生存</h1>
-                <h2>1.16--1.20</h2>
-                <h3>第一次出生在木屋，踏上踏板随机传送开始生存！</h3>
-<!--                 <h3>提示：若有违规行为(如炸服、炸图、违规偷家、拆管理区域建筑)将会不允许进入生存区！</h3> -->
-                <h3>暂不对外开放</h3>
-            </div>
-        
-        </div>
-        <h4>说明：上述描述可能与实际不符，以最新动态为主！</h4>
-    </div>
 
-    <div id="page34">
-      <div class="card-container">
-          <h1 style="justify-content: center;">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;我们还制作了...</h1>
-          <hr>
-          
-          
-      </div>
-      <div class="card-container">
-          <div class="card">
-              <h1>Creeper Minecraft Launcher Peo</h2>
-              <h2>原Comical Minecraft Launcher Pro启动器，一个MC启动器，现已停更或缓更</h2>
-              <h1>&ensp;</h1>
-              <h1>&ensp;</h1>
-              
-              
-              <a href="#page34" class="white-button">无下载链接</a>
-          </div>
-          <div class="card">
-              <h1>CMLC Client(1.8.9)</h1>
-              <h2>一个整合着多个mod的视觉客户端，暂不打算更新</h2>
-              <h2>提示：崩端问题暂时解决方法为开启快速渲染。</h2>
-              <h1>&ensp;</h1>
-              <h1>&ensp;</h1>
-              
-              <a href="#page34" class="white-button">群内下载</a>
-          </div>
+<div class="header">
+  <h2>ComicalPixel Network</h2>
+  <div id="headerright">
+    <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=926kghbvvbgNohrB6kjR7Ml7lgle_xqu&authKey=5ZzSHRmQoXJWXwndCIY3HCM4ECFnhveQt94vMSOqI1XCXmUjC40pO2G2MbDsiFvC&noverify=0&group_code=785558347" class="white-button" target="_blank">加入交流群</a>
+    <!-- <a href="#page3" class="white-button">加入世界</a> -->
+    <a> <a>  </a> <a>  </a> <a>  </a> </a>
+  </div>  
+</div>
 
-           </div>
-          <div class="card">
-              <h1>GodGold Bedwars1058 Addon</h1>
-              <h2>这是一个Spigot/Paper插件</h2>
-              <h2>Bedwars1058扩展，使你的起床看起来没那么单调！</h2>
-              <h1>&ensp;</h1>
-              <h1>&ensp;</h1>
-              
-              <a href="https://www.spigotmc.org/resources/godgold-bedwars1058-addon-%E4%B8%BA%E6%82%A8%E7%9A%84-bedwars-%E6%B8%B8%E6%88%8F%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%BA%9B%E8%A7%86%E8%A7%89%E5%85%83%E7%B4%A0%EF%BC%81.120441/" class="white-button">单击下载</a>
-          </div>
-          
-          
-      
+
+<div class="content">
+  <div id="page1" class="page active">
+    <div class="slider">
+      <img src="https://s21.ax1x.com/2025/02/02/pEZ0R1I.jpg" class="active">
+      <img src="https://s21.ax1x.com/2025/02/02/pEZ0Wct.jpg">
+      <img src="https://s21.ax1x.com/2025/02/02/pEZ0fjP.jpg">
+      <img src="https://s21.ax1x.com/2025/02/02/pEZ04nf.jpg">
+    </div>
+        
+    <div class="slider-text">
+        <!-- <h2>欢迎来到 ComicalPixel</h2>
+        <p class="active">这里是我们的首页，了解更多关于我们的内容。</p> -->
+        <h1><span id="main1-ms1" class="minecraft-text">欢迎来到 ComicalPixel</span></h1>
+        <h3><span id="main1-ms2" class="minecraft-text">小游戏服务器 MC开服社区 资源分享站</span></h3>
+        <h2></h2>
+        <!-- <a href="%main1-ms3_1%" class="spi-button"> <span id="main1-ms3" class="minecraft-text">滑动鼠标滚动页面查看</span> </a> -->
       </div>
+      
+      <div class="slider-controls">
+        <div class="slider-dots">
+          <span onclick="goToSlide(0)" class="active"></span>
+          <span onclick="goToSlide(1)"></span>
+          <span onclick="goToSlide(2)"></span>
+          <span onclick="goToSlide(3)"></span>
+          
+        </div>
+      </div>
+
       
   </div>
+  
 
-    <div id="page3">
-        <div class="large-blur-card">
-            <h2>加入我们</h2>
-            <h3>服务器IP:</h3>
-            <h3>comicalpixel.2m.pub</h3>
-             <h3>mc218.2m.pub</h3>
-             <h3>proxymc218.2m.pub</h3>
-            <h3>支持版本：1.7.10—1.20 (非1.8限制游戏)</h3>
-            <h3> </h3>
-            <h3>交流群号：785558347</h3>
-            <hr> 
-            <h4>提示:服务器公测阶段，非长期开放</h4>
+</div>
+<div class="server">
+    <h1>ComicalPixel 服务器</h1>
+    <p>ComicalPixel服务器自2023年3月成立，于同年7月转型为小游戏服务器，并在2024年5月开始小范围</p>
+    <p>公开测试。服务器内的所有游戏插件均为服主原创开发，目前仍处于内测阶段，致力于提供好的游戏</p>
+    <p>体验。为玩家带来和谐有趣的游戏环境。期待您的加入，与我们共同探索更多游戏乐趣。</p>
+    <p> </p>
+    
+    <div class="image-box">
+        <div class="image-container">
+            <img src="https://s21.ax1x.com/2025/02/02/pEZ05B8.png" alt="Game Image 1">
+            <div class="overlay">
+                <div class="overlay-text">NewBedwars - 起床战争</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://s21.ax1x.com/2025/02/02/pEZ0TAg.png" alt="Game Image 2">
+            <div class="overlay">
+                <div class="overlay-text">Skywars - 空岛战争</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://s21.ax1x.com/2025/02/02/pEZ0IHS.png" alt="Game Image 3">
+            <div class="overlay">
+                <div class="overlay-text">Bridging - 搭路练习</div>
+            </div>
         </div>
     </div>
+    <h1>加入世界！</h1>
+    <p>版本 1.7 - 1.21  推荐使用1.8.8-1.8.9客户端</p>
+    <p>JAVA版游戏地址: comicalpixel.2m.pub mc218.2m.pub 基岩版游戏地址(测试,误封不处理): 120.233.26.237:15087（<a href="minecraft://?addExternalServer=§eComical§bPixel§f§cBE|120.233.26.237:15087" target="_blank">一键添加至服务器列表</a>）</p>
+    
+</div>
+<div class="community">
+    <h1>社区</h1>
+    <div class="community-cards">
+        <div class="community-item">
+            <!-- <img src="wechat-icon.png" alt="微信图标"> -->
+            <h2>交流群</h2>
+            <p>您可以在群内与其他玩家交流，与群友分享开服经验， &ensp;以及反馈问题和聊天</p>
+            <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=926kghbvvbgNohrB6kjR7Ml7lgle_xqu&authKey=5ZzSHRmQoXJWXwndCIY3HCM4ECFnhveQt94vMSOqI1XCXmUjC40pO2G2MbDsiFvC&noverify=0&group_code=785558347" target="_blank">了解更多</a>
+          </div>
+        
+          <!-- <div class="community-item"> -->
+            <!-- <img src="discord-icon.png" alt="Discord图标"> -->
+            <!-- <h2>Discord</h2> -->
+            <!-- <p>与其他人进行实时聊天，有助于快速解决问题和规划未来</p> -->
+            <!-- <a href="#">了解更多</a> -->
+          <!-- </div> -->
+        
+          <!-- <div class="community-item"> -->
+            <!-- <img src="forum-icon.png" alt="论坛图标"> -->
+            <!-- <h2>官方论坛</h2> -->
+            <!-- <p>掌握最新资讯，进行举报和申诉，参与官方举办的各项活动</p> -->
+            <!-- <a href="#">了解更多</a> -->
+          <!-- </div> -->
+    </div>
+</div>
+
+
+<script>
+
+    // 顶栏状态
+   window.addEventListener('scroll', function () {
+        const topBar = document.querySelector('.header');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition <= 1.5) {
+            topBar.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        } else {
+            topBar.style.backgroundColor = 'rgba(51, 51, 51, 0.699)';
+        }
+    });
+
+    // 主页page1
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slider img');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        document.querySelectorAll('.slider-dots span').forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        updateText(index); 
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function goToPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(page => page.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+}
+
+document.querySelectorAll('.headertop').forEach(button => {
+  button.addEventListener('click', () => {
+    goToPage(button.getAttribute('href').substring(1));
+  });
+});
+
+    // 自动切换
+    setInterval(nextSlide, 10000); // 每10秒自动切换到下一页
+
+    document.querySelectorAll('.slider-dots span').forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
+    });
+
+    // 变量 (PAPI???????????????????)
+    // 
+    function updateText(index) {
+
+        setTimeout(function() {
+
+        const messageElement1 = document.getElementById('main1-ms1');
+        if (index === 0) {
+            messageElement1.textContent = "欢迎来到 ComicalPixel";
+        } 
+        else if (index === 1) {
+            messageElement1.textContent = "MC高质量小游戏";
+        }
+        else if (index === 2) {
+            messageElement1.textContent = "原创小游戏插件";
+        }
+        else if (index === 3) {
+            messageElement1.textContent = "MC开服社区/Bukkit插件开发教程";
+        }
+        else {
+            messageElement1.textContent = "Title";
+        }
+
+        const messageElement2 = document.getElementById('main1-ms2');
+        if (index === 0) {
+            messageElement2.textContent = "小游戏服务器 MC开服社区 资源分享站";
+        } 
+        else if (index === 1) {
+            messageElement2.textContent = "ComicalPixel服务器拥有/多人PVP/休闲游戏 游戏地址: comicalpixel.2m.pub";
+        }
+        else if (index === 2) {
+            messageElement2.textContent = "服务器的游戏插件均为原创, 累计代码量1W+";
+        }
+        else if (index === 3) {
+            messageElement2.textContent = "开服与插件开发教程见站内, 加入交流群一起交流";
+        }
+        else {
+            messageElement2.textContent = "subTitle";
+        }
+
+        const messageElement3 = document.getElementById('main1-ms3');
+        if (index === 0) {
+            messageElement3.textContent = "滑动鼠标滚动页面查看";
+        } 
+        else if (index === 1) {
+            messageElement3.textContent = "了解一下";
+        }
+        else if (index === 2) {
+            messageElement3.textContent = "暂无页面";
+        }
+        else if (index === 3) {
+            messageElement3.textContent = "加入交流群";
+        }
+        else {
+            messageElement3.textContent = "subTitle";
+        }
+
+        // const messageElement3_1 = document.getElementById('main1-ms3_1');
+        // if (index === 0) {
+        //     messageElement3_1.textContent = "";
+        // } 
+        // else if (index === 1) {
+        //     messageElement3_1.textContent = "了解一下";
+        // }
+        // else if (index === 2) {
+        //     messageElement3_1.textContent = "";
+        // }
+        // else if (index === 3) {
+        //     messageElement3_1.textContent = "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=L8y197eK36kVT6-3iO-Mxi7hQP0oqz_Y&authKey=Du5enrIo62w6y4BrWLMRpSOLLenVwIaagTBHd%2FR9Jtmbu5lo9mGydu8TVV6oTJdD&noverify=0&group_code=785558347";
+        // }
+        // else {
+        //     messageElement3.textContent = "";
+        // }
+
+    }, 300); // 为了保证图片过度时间，延迟一小会
+
+    }
+      
+</script>
+
 </body>
+
+
 <footer class="footer">
   
-  <div class="footcard">
     
+    <p style="color: #ffffff">&copy; 2023-2025 ComicalPixel Network</p>
+    <h1>&ensp;</h1>
+    <div></div>
+    <p style="color: #ffffff">友情链接</p>
+    <h1>&ensp;</h1>
+    <p style="color: #ccc">网站</p>
     
 
-  </div>
-  <p>&copy; 2023-2024 ComicalMC Network</p>
-  <h1>&ensp;</h1>
-  <div></div>
-  <p>友情链接</p>
-  <h1>&ensp;</h1>
-  <p style="color: #ccc">网站</p>
+    <a href="https://xmsbrowser.mysxl.cn/" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">我爱浏览器</a>
+    <a>&ensp;</a>
+    <a href="https://orson2010.github.io/Wearbox/2022/05/03/WB2.0/" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">WearBox</a>
+    
 
-  <a href="https://www.fapixel.com/" style="color: #ffffff; text-decoration: none; font-size: 12px;">FunnyArenaPixel</a>
-  <a href="https://nwbbs.cn/" style="color: #ffffff; text-decoration: none; font-size: 12px;">NWBBS新世界中文论坛(已关站)</a>
-  <a href="https://xmsbrowser.mysxl.cn/" style="color: #ffffff; text-decoration: none; font-size: 12px;">我爱浏览器</a>
-  <a href="https://www.newworldmc.cn/" style="color: #ffffff; text-decoration: none; font-size: 12px;">NewWorldMC(已关站)</a>
-  <a href="https://pan.nwbbs.cn/" style="color: #ffffff; text-decoration: none; font-size: 12px;">NewWorld云盘(已关站)</a>
-  <a href="https://wear.rexwe.net/" style="color: #ffffff; text-decoration: none; font-size: 12px;">RexWe(已关站)</a>
-  <a href="https://orson2010.github.io/Wearbox/2022/05/03/WB2.0/" style="color: #ffffff; text-decoration: none; font-size: 12px;">WearBox</a>
-  <p style="color: #ccc" >Blog 个人主页</p>
-  <a href="https://space.bilibili.com/545632714/" style="color: #ffffff; text-decoration: none; font-size: 12px;">KKCraft官方</a>
-  <a href="https://space.bilibili.com/16134030" style="color: #ffffff; text-decoration: none; font-size: 12px;">Themaker_Daidu</a>
-  <a href="https://space.bilibili.com/395958039" style="color: #ffffff; text-decoration: none; font-size: 12px;">实现梦想的小哆啦(TheGoodBoys)</a>
-  <a href="https://space.bilibili.com/627010617/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">柠檬初夏</a>
-  <a href="https://space.bilibili.com/2019671591/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">我是从前那个少年</a>
-  <a href="https://space.bilibili.com/569523515/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">我爱科技云</a>
-  <a href="https://space.bilibili.com/521106677/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">老树皮_</a>
-<!--   <a href="https://space.bilibili.com/660301960?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">yel114514</a> -->
-<!--   <a href="https://space.bilibili.com/2013923367/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">_F12PVP_</a> -->
-<!--   <a href="https://space.bilibili.com/1439074718/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 12px;">小恺恺1314</a> -->
-</footer>
+    <p>&ensp;</p>
+    
+
+    <p style="color: #ccc" >个人主页</p>
+    <a href="https://space.bilibili.com/545632714" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">KKCraft官方</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/3546600896989432" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">FAPixel(Java)官方</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/395958039" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">TheGoodBoys</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/16134030?spm_id_from=333.337.0.0" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">Themaker_Daidu</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/1063711459" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">Live_Tiles</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/60051886?spm_id_from=333.337.0.0" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">CyanBukkit网站</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/3493113305762144?spm_id_from=333.337.0.0" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">FreeMC自由麦块服务器</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/2048493950" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">纸团</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/3493267364645075" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">神秘海龟</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/391809658" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">ALazyPikaXD</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/569523515?spm_id_from=333.337.0.0" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">我爱科技云</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/627010617/?spm_id_from=333.999.0.0" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">柠檬初夏?</a>
+    <a>&ensp;</a>
+    <a href="https://space.bilibili.com/1268760897?spm_id_from=333.337.0.0" style="color: #ffffff; text-decoration: none; font-size: 13px;" target="_blank">早茶光</a>
+
+    
+
+    <p>&ensp;</p>
+    <p>&ensp;</p>
+    <p>&ensp;</p>
+
+    <div class="footcard">
+      
+        <p style="color: #555555">声明：本网站及本服务器与微软及MojangStudio无任何从属关系 | Disclaimer: This website and this server have no affiliation with Microsoft or MojangStudio.</p>
+  
+    </div>
+
+  </footer>
+
 </html>

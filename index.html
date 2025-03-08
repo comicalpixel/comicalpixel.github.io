@@ -450,6 +450,35 @@
       height: 8px;
     }
   }
+
+  /* 根据分辨率调整缩放比例 */
+  @media (max-width: 1280px) {
+    body {
+      zoom: 0.9;
+      /* 或者使用 transform: scale(0.9); transform-origin: top left; */
+    }
+  }
+
+  @media (max-width: 1024px) {
+    body {
+      zoom: 0.8;
+      /* 或者使用 transform: scale(0.8); transform-origin: top left; */
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      zoom: 0.7;
+      /* 或者使用 transform: scale(0.7); transform-origin: top left; */
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      zoom: 0.6;
+      /* 或者使用 transform: scale(0.6); transform-origin: top left; */
+    }
+  }
 </style>
 
 </head>

@@ -1,1 +1,2 @@
-# http://enderklp.top
+# https://www.comicalpixel.cn
+# https://rescourse.comicalpixel.cn

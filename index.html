@@ -30,7 +30,7 @@
             font-family: "Microsoft YaHei", sans-serif;
             color: var(--text-white);
             line-height: 1.6;
-            overflow-x: hidden; /* 防止横向滚动 */
+            overflow-x: hidden;
         }
 
         /* 顶栏优化 */
@@ -39,7 +39,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 80px; /* 固定高度，避免变形 */
+            height: 80px;
             background-color: transparent;
             backdrop-filter: blur(9px);
             display: flex;
@@ -83,7 +83,7 @@
 
         /* 第一页 - 首页横幅 */
         .page1 {
-            height: 100vh; /* 视口高度，适配所有屏幕 */
+            height: 100vh;
             background-image: url("https://s21.ax1x.com/2025/06/26/pVmtHyQ.jpg");
             background-size: cover;
             background-position: center;
@@ -115,7 +115,7 @@
         }
 
         .slider-text h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem); /* 响应式字体 */
+            font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 20px;
         }
 
@@ -123,7 +123,7 @@
         .awords {
             overflow: hidden;
             position: relative;
-            height: 2rem; /* 固定高度，避免抖动 */
+            height: 2rem;
             font-size: clamp(1rem, 3vw, 1.2rem);
         }
 
@@ -138,6 +138,7 @@
                 var(--bg-color) 1000%
             );
             z-index: 10;
+            pointer-events: none;
         }
 
         .aword {
@@ -145,7 +146,7 @@
             height: 100%;
             padding-left: 6px;
             color: #dbfff4;
-            animation: spin_4991 8s infinite ease-in-out; /* 放慢动画，更流畅 */
+            animation: spin_4991 8s infinite ease-in-out;
         }
 
         @keyframes spin_4991 {
@@ -200,9 +201,9 @@
 
         /* 第二页 - 服务器展示 */
         .page2 {
-            min-height: 100vh; /* 自适应高度，替换硬编码2100px */
+            min-height: 100vh;
             background: #1d1d1d;
-            padding: 80px 20px; /* 顶部留白，避开导航栏 */
+            padding: 80px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -223,6 +224,7 @@
             font-size: clamp(1.5rem, 4vw, 2.5rem);
             margin-bottom: 20px;
             color: #dbfff4;
+            text-align: center;
         }
 
         .p2card .card-des {
@@ -243,7 +245,7 @@
 
         .hover-card {
             position: relative;
-            width: clamp(280px, 100%, 400px); /* 响应式宽度 */
+            width: clamp(280px, 100%, 400px);
             height: 270px;
             border-radius: 5px;
             overflow: hidden;
@@ -251,7 +253,7 @@
         }
 
         .hover-card:hover {
-            transform: translateY(-5px); /* 悬浮上浮，更有层次感 */
+            transform: translateY(-5px);
         }
 
         .hover-card img {
@@ -298,7 +300,7 @@
 
         .hover-card:hover .card-text {
             transform: translateY(0);
-            opacity: 10;
+            opacity: 1;
         }
 
         /* 第三页 - 插件展示 */
@@ -316,25 +318,28 @@
             font-size: clamp(1.5rem, 4vw, 2.5rem);
             margin-bottom: 40px;
             color: #dbfff4;
+            text-align: center;
         }
 
         .p3_cards {
             display: flex;
-            flex-wrap: wrap; /* 改为换行，适配手机 */
-            gap: 30px; /* 增加间距，避免拥挤 */
+            flex-wrap: wrap;
+            gap: 30px;
             justify-content: center;
             width: 100%;
             max-width: 1200px;
         }
 
         .p3_card {
-            max-width: 350px;
+            width: 350px;
+            max-width: 100%;
             min-height: 400px;
             background-color: var(--card-bg);
             border-radius: 0.5rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             border: 1px solid #444;
             transition: transform 0.3s ease;
+            overflow: hidden;
         }
 
         .p3_card:hover {
@@ -346,6 +351,7 @@
             height: 180px;
             background-size: cover;
             background-position: center;
+            background-color: #3a3a3a;
         }
 
         .p3_content {
@@ -357,6 +363,7 @@
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 1rem;
+            display: block;
         }
 
         .p3_desc {
@@ -410,6 +417,45 @@
             line-height: 1.8;
             margin-bottom: 20px;
             font-weight: normal;
+        }
+
+        .about-group-title {
+            color: #dbfff4;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .about-group-cards {
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .about-group-cards:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* 成员卡片专用紧凑样式 */
+        .about-group-cards .p3_card {
+            min-height: auto;
+        }
+
+        .about-group-cards .p3_image.placeholder {
+            background-color: transparent;
+            background-image: none;
+            height: 20px;
+        }
+
+        .about-group-cards .p3_content {
+            padding: 1.2rem;
+        }
+
+        .about-group-cards .p3_desc {
+            margin-bottom: 0;
+        }
+
+        .about-group-cards .p3_action {
+            margin-top: 10px;
         }
 
         /* 社区板块 */
@@ -477,7 +523,7 @@
         /* 页脚优化 */
         .footer {
             background-color: #333;
-            padding: 60px 20px; /* 减少内边距，避免手机端过长 */
+            padding: 60px 20px;
             text-align: center;
         }
 
@@ -489,7 +535,7 @@
         .footer a {
             color: #ccc;
             text-decoration: none;
-            margin: 0 8px; /* 均匀间距 */
+            margin: 0 8px;
             font-size: 0.85rem;
         }
 
@@ -509,7 +555,7 @@
             font-size: 0.8rem;
         }
 
-        /* 响应式适配（原生适配，替换zoom） */
+        /* 响应式适配 */
         @media (max-width: 768px) {
             .header {
                 padding: 0 15px;
@@ -538,7 +584,8 @@
             }
 
             .p3_card {
-                min-height: 350px;
+                width: 100%;
+                min-height: auto;
             }
 
             .footer {
@@ -560,13 +607,18 @@
             }
 
             .page1, .page2, .page3, .page_about, .community {
-                padding-top: 100px; /* 适配导航栏高度 */
+                padding-top: 100px;
             }
 
             .p3_action {
                 display: block;
                 width: 100%;
                 justify-content: center;
+                text-align: center;
+            }
+
+            .about-group-title {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -576,9 +628,9 @@
     <div class="header">
         <h2>ComicalPixel Network</h2>
         <div id="headerright">
-            <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=926kghbvvbgNohrB6kjR7Ml7lgle_xqu&authKey=5ZzSHRmQoXJWXwndCIY3HCM4ECFnhveQt94vMSOqI1XCXmUjC40pO2G2MbDsiFvC&noverify=0&group_code=785558347" class="white-button" target="_blank">加入世界</a>
-            <a href="http://resources.comicalpixel.cn/" class="white-button" target="_blank">访问资源站</a>
-        </div>  
+            <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=926kghbvvbgNohrB6kjR7Ml7lgle_xqu&authKey=5ZzSHRmQoXJWXwndCIY3HCM4ECFnhveQt94vMSOqI1XCXmUjC40pO2G2MbDsiFvC&noverify=0&group_code=785558347" class="white-button" target="_blank" rel="noopener">加入世界</a>
+            <a href="http://resources.comicalpixel.cn/" class="white-button" target="_blank" rel="noopener">访问资源站</a>
+        </div>
     </div>
 
     <!-- 首页横幅 -->
@@ -607,23 +659,21 @@
     <!-- 服务器展示 -->
     <div class="page2">
         <div class="p2card">
-            
             <h1>ComicalPixel Minecraft 服务器</h1>
-            <p class="card-des">
+            <div class="card-des">
                 目前仍处于公测阶段，致力于提供好的游戏体验。
-                为玩家带来和谐有趣的游戏环境。期待您的加入，与我们共同探索更多游戏乐趣! 
-                <h5> <br> </h5>
-                <iframe style="width:728px;height:90px;max-width:100%;border:none;display:block;margin:auto" src="https://zh-cn.namemc.com/server/mc.comicalpixel.cn/embed" width="728" height="90"></iframe>
-                <h5> <br> </h5>
-            </p>
+                为玩家带来和谐有趣的游戏环境。期待您的加入，与我们共同探索更多游戏乐趣!
+                <br><br>
+                <iframe style="width:728px;height:90px;max-width:100%;border:none;display:block;margin:auto" src="https://namemc.com/server/mc.comicalpixel.cn/embed" width="728" height="90" loading="lazy"></iframe>
+                <br>
+            </div>
             <div class="image-box">
                 <div class="hover-card">
                     <img src="https://s41.ax1x.com/2026/09/19/pnMlAoD.png" alt="Lobby" loading="lazy">
                     <div class="card-overlay">
                         <div class="card-text">
                             <h3><br>主大厅</h3>
-                            <p>lobby<br><br><br>
-                            &ensp;</p>
+                            <p>lobby<br><br><br>&ensp;</p>
                         </div>
                     </div>
                 </div>
@@ -632,8 +682,7 @@
                     <div class="card-overlay">
                         <div class="card-text">
                             <h3><br>超级床の战争</h3>
-                            <p>Bedwars<br><br><br>
-                            &ensp;</p>
+                            <p>Bedwars<br><br><br>&ensp;</p>
                         </div>
                     </div>
                 </div>
@@ -642,18 +691,16 @@
                     <div class="card-overlay">
                         <div class="card-text">
                             <h3><br>空岛战争</h3>
-                            <p>Skywars<br><br><br>
-                            &ensp;</p>
+                            <p>Skywars<br><br><br>&ensp;</p>
                         </div>
                     </div>
                 </div>
                 <div class="hover-card">
-                    <img src="https://s41.ax1x.com/2026/08/10/pmb8oCD.png" alt="Skywars" loading="lazy">
+                    <img src="https://s41.ax1x.com/2026/08/10/pmb8oCD.png" alt="Bridging" loading="lazy">
                     <div class="card-overlay">
                         <div class="card-text">
                             <h3><br>搭路练习</h3>
-                            <p>Bridging<br><br><br>
-                            &ensp;</p>
+                            <p>Bridging<br><br><br>&ensp;</p>
                         </div>
                     </div>
                 </div>
@@ -662,18 +709,16 @@
                     <div class="card-overlay">
                         <div class="card-text">
                             <h3><br>幸运方块の战争</h3>
-                            <p>LuckyBlockWars<br><br><br>
-                            &ensp;</p>
+                            <p>LuckyBlockWars<br><br><br>&ensp;</p>
                         </div>
                     </div>
                 </div>
                 <div class="hover-card">
-                    <img src="https://s21.ax1x.com/2025/08/23/pVDXhI1.png" alt="LuckyBlockWars" loading="lazy">
+                    <img src="https://s21.ax1x.com/2025/08/23/pVDXhI1.png" alt="KBFFA" loading="lazy">
                     <div class="card-overlay">
                         <div class="card-text">
                             <h3><br>击退战场</h3>
-                            <p>KBFFA<br><br><br>
-                            &ensp;</p>
+                            <p>KBFFA<br><br><br>&ensp;</p>
                         </div>
                     </div>
                 </div>
@@ -683,7 +728,7 @@
 
     <!-- 插件展示 -->
     <div class="page3">
-        <h1>资源分享站 (</h1>
+        <h1>资源分享站</h1>
         <div class="p3_cards">
             <div class="p3_card">
                 <div class="p3_image" style="background-image:url(https://s21.ax1x.com/2025/08/23/pVDxV2V.png)"></div>
@@ -693,19 +738,19 @@
                         这是一个由Xiaol789zxc开发的一款起床战争插件,
                         一个拥有较基础的超级起床战争插件，自定义队伍、全局语言、游戏事件、物品商店、团队商店... <br>
                         <br>
-                        插件的功能比市面上免费的起床战争插件功能和道具更加丰富，如果有bug记得到Github提交Issue呀，我们会尽可能及时修复!(开学期间的工作日除外)                        
+                        插件的功能比市面上免费的起床战争插件功能和道具更加丰富，如果有bug记得到Github提交Issue呀，我们会尽可能及时修复!(开学期间的工作日除外)
                     </p>
-                    <a class="p3_action" href="https://github.com/comicalpixel/CreeperStarBedwars/" style="background-color: #3f3f3f" target="_blank">
+                    <a class="p3_action" href="https://github.com/comicalpixel/CreeperStarBedwars/" style="background-color: #3f3f3f" target="_blank" rel="noopener">
                         Github <span aria-hidden="true">→&ensp;</span>
                     </a>
-                    <a class="p3_action" href="https://www.spigotmc.org/resources/creeperstarbedwars.126921/" style="background-color: #e0ac01" target="_blank">
+                    <a class="p3_action" href="https://www.spigotmc.org/resources/creeperstarbedwars.126921/" style="background-color: #e0ac01" target="_blank" rel="noopener">
                         SpigotMC <span aria-hidden="true">→&ensp;</span>
                     </a>
-                    <a class="p3_action" href="https://cyanbukkit.net/index.php?resources/creeperstarbedwars.228/" style="background-color: #00b6bd" target="_blank">
+                    <a class="p3_action" href="https://cyanbukkit.net/index.php?resources/creeperstarbedwars.228/" style="background-color: #00b6bd" target="_blank" rel="noopener">
                         CyanBukkit <span aria-hidden="true">→&ensp;</span>
                     </a>
                 </div>
-            </div>       
+            </div>
             <div class="p3_card">
                 <div class="p3_image" style="background-image:url(https://s21.ax1x.com/2025/08/23/pVDvbEd.png)"></div>
                 <div class="p3_content">
@@ -716,11 +761,11 @@
                         该插件已停更，请不要请求任何更新与修复！<br>
                         (你也许在KKCraft服务端可以见到它!)
                     </p>
-                    <a class="p3_action" href="https://www.spigotmc.org/resources/godgold-bedwars1058-addon-%E4%B8%BA%E6%82%A8%E7%9A%84-bedwars-%E6%B8%B8%E6%88%8F%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%BA%9B%E8%A7%86%E8%A7%89%E5%85%83%E7%B4%A0%EF%BC%81.120441/" style="background-color: #e0ac01" target="_blank">
+                    <a class="p3_action" href="https://www.spigotmc.org/resources/godgold-bedwars1058-addon-%E4%B8%BA%E6%82%A8%E7%9A%84-bedwars-%E6%B8%B8%E6%88%8F%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%BA%9B%E8%A7%86%E8%A7%89%E5%85%83%E7%B4%A0%EF%BC%81.120441/" style="background-color: #e0ac01" target="_blank" rel="noopener">
                         SpigotMC <span aria-hidden="true">→&ensp;</span>
                     </a>
                 </div>
-            </div>  
+            </div>
             <div class="p3_card">
                 <div class="p3_image"></div>
                 <div class="p3_content">
@@ -728,11 +773,11 @@
                     <p class="p3_desc">
                         一个简单的资源分享站
                     </p>
-                    <a class="p3_action" href="https://resources.comicalpixel.cn" style="background-color: #09b3d1" target="_blank">
+                    <a class="p3_action" href="https://resources.comicalpixel.cn" style="background-color: #09b3d1" target="_blank" rel="noopener">
                         点我载入 <span aria-hidden="true">→&ensp;</span>
                     </a>
                 </div>
-            </div>  
+            </div>
         </div>
     </div>
 
@@ -743,67 +788,89 @@
             ComicalPixel Network创立于2023<br>
             致力于让玩家游玩到游戏环境友好、玩法丰富且好玩的小游戏服务器。
         </h5>
-        <h5>
-            <br>
-        </h5>
-        <div class="p3_cards">
+
+        <!-- 运营组 -->
+        <h2 class="about-group-title">运营组</h2>
+        <div class="p3_cards about-group-cards">
             <div class="p3_card">
-                <div class="p3_image" style="background-image:url(https://i1.hdslb.com/bfs/face/f3e0eeb5993d887098b52a9f06918b9e520a9687.jpg@1024w_1024h_1c_1s.webp)"></div>
+                <div class="p3_image placeholder"></div>
                 <div class="p3_content">
                     <span class="p3_title">Xiaol789zxc</span>
                     <p class="p3_desc">
                         ComicalPixel创始人<br>
-                        ComicalPixel服务器服主<br>
-                        ComicalPixel服务器主要开发者
+                        ComicalPixel服务器主要开发者<br>
+                        ComicalPixel运营组成员
                     </p>
-                    <a class="p3_action" href="https://space.bilibili.com/1519248160?spm_id_from=333.1007.0.0" style="background-color: #01a1e0" target="_blank">
-                        B站主页 <span aria-hidden="true">→&ensp;</span>
-                    </a>
                 </div>
-            </div>  
+            </div>
             <div class="p3_card">
-                <div class="p3_image" style="background-image:url(https://i1.hdslb.com/bfs/face/6b91d17dd4c039395cfd440dd5f18e6922562d3b.jpg@1024w_1024h_1c_1s_!web-avatar.avif)"></div>
+                <div class="p3_image placeholder"></div>
                 <div class="p3_content">
                     <span class="p3_title">Themaker_Daidu</span>
                     <p class="p3_desc">
                         ComicalPixel服务器主要开发者<br>
                         ComicalPixel服务器开发组成员<br>
-                        ComicalPixel管理组成员
+                        ComicalPixel运营组成员
                     </p>
-                    <a class="p3_action" href="https://space.bilibili.com/3546600896989432" style="background-color: #01a1e0" target="_blank">
-                        B站主页 <span aria-hidden="true">→&ensp;</span>
-                    </a>
                 </div>
             </div>
             <div class="p3_card">
-                <div class="p3_image" style="background-image:url(https://i1.hdslb.com/bfs/face/6096d9dbe1bf22bd07f180ebcdc5ac1b9c0ab1ec.jpg@1024w_1024h_1c_1s.webp)"></div>
+                <div class="p3_image placeholder"></div>
                 <div class="p3_content">
-                    <span class="p3_title">TheGoodBoys</span>
+                    <span class="p3_title">TimXia</span>
                     <p class="p3_desc">
-                        Xiaol789zxc的师傅<br>
-                        ComicalPixel管理组成员<br>
-                        ComicalPixel服务器开发组成员
+                        ComicalPixel运营组<br>
+                        ComicalPixel开发组成员
                     </p>
-                    <a class="p3_action" href="https://space.bilibili.com/395958039?spm_id_from=333.1387" style="background-color: #01a1e0" target="_blank">
-                        B站主页 <span aria-hidden="true">→&ensp;</span>
-                    </a>
+                    <!-- <a class="p3_action" href="#" style="background-color: #3f3f3f" target="_blank" rel="noopener">
+                        了解更多 <span aria-hidden="true">→&ensp;</span>
+                    </a> -->
                 </div>
-            </div>  
+            </div>
+        </div>
+
+        <!-- 管理组 -->
+        <h2 class="about-group-title">管理组</h2>
+        <div class="p3_cards about-group-cards">
             <div class="p3_card">
-                <div class="p3_image" style="background-image:url(https://i1.hdslb.com/bfs/face/ddeb5e8b333027121b81644c5e537df3239a2f7d.jpg@1024w_1024h_1c_1s.webp)"></div>
+                <div class="p3_image placeholder"></div>
                 <div class="p3_content">
-                    <span class="p3_title">CyanBukkit</span>
+                    <span class="p3_title">就叫小西猫</span>
                     <p class="p3_desc">
-                        ComicalPixel管理组成员<br>
+                        ComicalPixel管理组<br>
+                        修仙生存负责人
                     </p>
-                    <a class="p3_action" href="https://space.bilibili.com/60051886" style="background-color: #01a1e0" target="_blank">
-                        B站主页 <span aria-hidden="true">→&ensp;</span>
-                    </a>
-                    <a class="p3_action" href="https://cyanbukkit.net" style="background-color: #00b6bd" target="_blank">
-                        CyanBukkit官网 <span aria-hidden="true">→&ensp;</span>
-                    </a>
                 </div>
-            </div>  
+            </div>
+            <div class="p3_card">
+                <div class="p3_image placeholder"></div>
+                <div class="p3_content">
+                    <span class="p3_title">idbw</span>
+                    <p class="p3_desc">
+                        ComicalPixel管理组<br>
+                        修仙生存负责人
+                    </p>
+                </div>
+            </div>
+            <div class="p3_card">
+                <div class="p3_image placeholder"></div>
+                <div class="p3_content">
+                    <span class="p3_title">暗影喵喵</span>
+                    <p class="p3_desc">
+                        ComicalPixel管理组<br>
+                        策划
+                    </p>
+                </div>
+            </div>
+            <div class="p3_card">
+                <div class="p3_image placeholder"></div>
+                <div class="p3_content">
+                    <span class="p3_title">Hmaltydh</span>
+                    <p class="p3_desc">
+                        ComicalPixel管理组
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -812,9 +879,14 @@
         <h1>社区</h1>
         <div class="community-cards">
             <div class="community-item">
-                <h2>交流群</h2>
-                <p>您可以在群内与其他玩家交流，与群友分享开服经验与交流!</p>
-                <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=926kghbvvbgNohrB6kjR7Ml7lgle_xqu&authKey=5ZzSHRmQoXJWXwndCIY3HCM4ECFnhveQt94vMSOqI1XCXmUjC40pO2G2MbDsiFvC&noverify=0&group_code=785558347" target="_blank">了解更多</a>
+                <h2>技术交流群</h2>
+                <p>您可以在群内群友分享开服经验与交流!</p>
+                <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=926kghbvvbgNohrB6kjR7Ml7lgle_xqu&authKey=5ZzSHRmQoXJWXwndCIY3HCM4ECFnhveQt94vMSOqI1XCXmUjC40pO2G2MbDsiFvC&noverify=0&group_code=785558347" target="_blank" rel="noopener">了解更多</a>
+            </div>
+            <div class="community-item">
+                <h2>玩家交流群</h2>
+                <p>您可以在群内与其他玩家交流并接收服务器最新动态！</p>
+                <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=sVyd%2BiQ0BmcfOuX%2BiNNTbzcd3LJbDtjARR3PPhmOAHSkGwhk3eJvfdkONz8sjpRA&busi_data=eyJncm91cENvZGUiOiI4MzU2OTE2NDYiLCJ0b2tlbiI6IkdBR0QwZk8xcjVLS1UrOWVzb1FXK2pWMXZMV0xESlJHdGQ0QWpyenJza3MveWVuYkZmMWY3SEpCeFZrMlMvYTgiLCJ1aW4iOiIyOTUwMjEzNTEwIn0%3D&data=K4Rmj_ipfQKFwrR7NMjlOaTjoAx1ZJVmHUtfrVtdufuKJfUMcL6Ab_WiF9CCqwXPe2qfauU9z7zdtupNHTOZgw&svctype=4&tempid=h5_group_info" target="_blank" rel="noopener">了解更多</a>
             </div>
         </div>
     </div>
@@ -827,45 +899,31 @@
         <br>
         <p style="color: #ccc">网站</p>
         <br>
-                            
-        <a href="https://cyanbukkit.net" style="text-decoration: none; font-size: 13px;" target="_blank">CyanBukkit网站</a>
 
-        <a href="https://www.cyanbukkit.cn/" style="text-decoration: none; font-size: 13px;" target="_blank">玄易导航</a>
+        <a href="https://xmsbrowser.mysxl.cn/" target="_blank" rel="noopener">我爱浏览器</a>
 
-        <a href="https://www.waigame.cn/" style="text-decoration: none; font-size: 13px;" target="_blank">WaiGame歪游网络</a>
-
-        <a href="https://www.xseari.com/" style="text-decoration: none; font-size: 13px;" target="_blank">Xsou玄搜</a>
-        
-        <a href="https://xmsbrowser.mysxl.cn/" style="text-decoration: none; font-size: 13px;" target="_blank">我爱浏览器</a>
-        
-        <a href="https://orson2010.github.io/Wearbox/2022/05/03/WB2.0/" style="text-decoration: none; font-size: 13px;" target="_blank">WearBox</a>
-<br><br>
+        <a href="https://orson2010.github.io/Wearbox/2022/05/03/WB2.0/" target="_blank" rel="noopener">WearBox</a>
+        <br><br>
         <p style="color: #ccc">个人主页</p>
         <br>
-        <a href="https://space.bilibili.com/545632714" style="text-decoration: none; font-size: 13px;" target="_blank">KKCraft官方账号(旧)</a>
+        <a href="https://space.bilibili.com/545632714" target="_blank" rel="noopener">KKCraft官方账号(旧)</a>
 
-        <a href="https://space.bilibili.com/3706954503424173?spm_id_from=333.1387.follow.user_card.click" style="text-decoration: none; font-size: 13px;" target="_blank">KKCraft官方账号</a>
-                        
-        <a href="https://space.bilibili.com/395958039" style="text-decoration: none; font-size: 13px;" target="_blank">实现梦想的小哆啦</a>
-        
-        <a href="https://space.bilibili.com/1063711459" style="text-decoration: none; font-size: 13px;" target="_blank">LiveTiles</a>
-        
-        <a href="https://space.bilibili.com/60051886?spm_id_from=333.337.0.0" style="text-decoration: none; font-size: 13px;" target="_blank">CyanBukkit网站</a>
-        
-        <a href="https://space.bilibili.com/2048493950" style="text-decoration: none; font-size: 13px;" target="_blank">纸团PaperBalls</a>
-        
-        <a href="https://space.bilibili.com/3493267364645075" style="text-decoration: none; font-size: 13px;" target="_blank">神秘海龟</a>
-        
-        <a href="https://space.bilibili.com/391809658" style="text-decoration: none; font-size: 13px;" target="_blank">ALazyPikaXD</a>
-        
-        <a href="https://space.bilibili.com/569523515?spm_id_from=333.337.0.0" style="text-decoration: none; font-size: 13px;" target="_blank">我爱科技云</a>
-        
-        <a href="https://space.bilibili.com/1268760897?spm_id_from=333.337.0.0" style="text-decoration: none; font-size: 13px;" target="_blank">早茶光</a>
+        <a href="https://space.bilibili.com/3706954503424173?spm_id_from=333.1387.follow.user_card.click" target="_blank" rel="noopener">KKCraft官方账号</a>
+
+        <a href="https://space.bilibili.com/1063711459" target="_blank" rel="noopener">LiveTiles</a>
+
+        <a href="https://space.bilibili.com/2048493950" target="_blank" rel="noopener">纸团PaperBalls</a>
+
+        <a href="https://space.bilibili.com/391809658" target="_blank" rel="noopener">ALazyPikaXD</a>
+
+        <a href="https://space.bilibili.com/569523515?spm_id_from=333.337.0.0" target="_blank" rel="noopener">我爱科技云</a>
+
+        <a href="https://space.bilibili.com/1268760897?spm_id_from=333.337.0.0" target="_blank" rel="noopener">早茶光</a>
         <br><br><br>
         <div class="footcard">
-            <a style="color: #555555; text-decoration: none; font-size: 13px;">本网站由</a> 
-            <a href="https://github.io" style="color: #dddddd; text-decoration: none; font-size: 13px;" target="_blank">Github Page</a> 
-            <a style="color: #555555; text-decoration: none; font-size: 13px;">强力驱动 | </a> 
+            <a style="color: #555555; text-decoration: none; font-size: 13px;">本网站由</a>
+            <a href="https://github.io" style="color: #dddddd; text-decoration: none; font-size: 13px;" target="_blank" rel="noopener">Github Page</a>
+            <a style="color: #555555; text-decoration: none; font-size: 13px;">强力驱动 | </a>
             <a style="color: #555555; text-decoration: none; font-size: 13px;">声明：本网站及本服务器与微软及MojangStudio无任何从属关系</a>
         </div>
     </footer>
@@ -875,11 +933,12 @@
         window.addEventListener('scroll', function () {
             const header = document.querySelector('.header');
             const scrollPosition = window.scrollY;
+            const headerBg = getComputedStyle(document.documentElement).getPropertyValue('--header-bg').trim();
 
             if (scrollPosition <= 270) {
                 header.style.backgroundColor = 'transparent';
             } else {
-                header.style.backgroundColor = var(--header-bg);
+                header.style.backgroundColor = headerBg;
             }
         });
 

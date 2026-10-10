@@ -234,6 +234,44 @@
             text-align: center;
         }
 
+        /* 服务器信息栏 */
+        .server-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .server-ip {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: #2b2b2b;
+            border: 1px solid #444;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #dbfff4;
+            letter-spacing: 0.5px;
+        }
+
+        .server-ip .label {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            letter-spacing: 0;
+        }
+
+        .server-ip .ip-value {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .server-version {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
         /* 服务器卡片布局优化 */
         .image-box {
             display: flex;
@@ -588,6 +626,11 @@
                 min-height: auto;
             }
 
+            .server-ip {
+                font-size: 0.95rem;
+                padding: 10px 18px;
+            }
+
             .footer {
                 padding: 40px 15px;
             }
@@ -619,6 +662,13 @@
 
             .about-group-title {
                 font-size: 1.4rem;
+            }
+
+            .server-ip {
+                flex-direction: column;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
             }
         }
     </style>
@@ -663,10 +713,17 @@
             <div class="card-des">
                 目前仍处于公测阶段，致力于提供好的游戏体验。
                 为玩家带来和谐有趣的游戏环境。期待您的加入，与我们共同探索更多游戏乐趣!
-                <br><br>
-                <iframe style="width:728px;height:90px;max-width:100%;border:none;display:block;margin:auto" src="https://namemc.com/server/mc.comicalpixel.cn/embed" width="728" height="90" loading="lazy"></iframe>
-                <br>
             </div>
+
+            <!-- 服务器信息 -->
+            <div class="server-info">
+                <div class="server-ip">
+                    <span class="label">服务器 IP</span>
+                    <span class="ip-value">mc.comicalpixel.cn</span>
+                </div>
+                <div class="server-version">已兼容 1.7.10 - 26.2 版本，欢迎各版本玩家加入！</div>
+            </div>
+
             <div class="image-box">
                 <div class="hover-card">
                     <img src="https://s41.ax1x.com/2026/09/19/pnMlAoD.png" alt="Lobby" loading="lazy">
@@ -822,9 +879,6 @@
                         ComicalPixel运营组<br>
                         ComicalPixel开发组成员
                     </p>
-                    <!-- <a class="p3_action" href="#" style="background-color: #3f3f3f" target="_blank" rel="noopener">
-                        了解更多 <span aria-hidden="true">→&ensp;</span>
-                    </a> -->
                 </div>
             </div>
         </div>
